@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Image from "next/image";
-import { ReactElement } from "react";
+import Head from 'next/head';
+import Image from 'next/image';
+import { ReactElement } from 'react';
 
 export default function Home(): ReactElement {
   return (
