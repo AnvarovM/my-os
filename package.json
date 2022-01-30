@@ -39,11 +39,18 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "^5.0.4",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
     "prettier": "2.5.1",
     "stylelint": "^14.3.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "typescript": "^4.5.5"
+  },
+  "lint-staged": {
+    "*": "prettier --write",
+    "*.{js, ts, tsx}": "eslint --cache --fix",
+    "*.scss": "stylelint --fix"
   }
 }
