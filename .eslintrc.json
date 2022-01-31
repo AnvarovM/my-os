@@ -22,6 +22,7 @@
   },
   "plugins": ["@typescript-eslint", "jest", "react", "simple-import-sort"],
   "rules": {
+    "comma-dangle": ["error", "never"],
     "max-lines": ["error", 80],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
     "simple-import-sort/imports": "error",
@@ -29,7 +30,6 @@
     "semi": ["error", "always"],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "comma-dangle": ["error", "never"],
     "linebreak-style": 0
   }
 }
