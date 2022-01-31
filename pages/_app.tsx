@@ -5,7 +5,10 @@ import Head from 'next/head';
 // eslint-disable-next-line import/no-unresolved
 import { description, name } from 'package.json';
 import { ReactElement } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+// eslint-disable-next-line import/no-unresolved
+import defaultTheme from 'themes/default.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -15,12 +18,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {
-  colors: {
-    primary: '#0070f3'
-  }
-};
-
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
     <>
@@ -29,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
         <meta name="description" content={description} />
       </Head>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={defaultTheme}>
         <Component {...pageProps} />
       </ThemeProvider>
     </>
