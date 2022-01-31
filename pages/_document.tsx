@@ -4,7 +4,6 @@ import Document, {
   Html, Head, Main, NextScript
 } from 'next/document';
 // eslint-disable-next-line import/no-unresolved
-import { name } from 'package.json';
 import { ReactElement } from 'react';
 
 class MyDocument extends Document {
@@ -18,9 +17,7 @@ class MyDocument extends Document {
   render(): ReactElement {
     return (
       <Html lang="en">
-        <Head>
-          <title>{ name }</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
