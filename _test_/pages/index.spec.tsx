@@ -13,6 +13,7 @@ test('renders index page', () => {
       <Index />
     </ThemeProvider>
   );
+  // eslint-disable-next-line testing-library/prefer-screen-queries
   const howAreYou = getByText('Hi how are you?');
   expect(howAreYou).toBeInTheDocument();
 });

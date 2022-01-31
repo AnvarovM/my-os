@@ -1,10 +1,10 @@
 import '../styles/globals.scss';
 
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 // eslint-disable-next-line import/no-unresolved
 import { description, name } from 'package.json';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 // eslint-disable-next-line import/no-unresolved

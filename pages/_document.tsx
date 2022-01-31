@@ -1,5 +1,7 @@
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Document, {
+  Head, Html, Main, NextScript
+} from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 // eslint-disable-next-line import/no-unresolved
 // import { DEFAULT_LOCALE } from 'utils/constants';
@@ -11,10 +13,9 @@ const withStyledComponents = async (
   const sheet = new ServerStyleSheet();
 
   try {
-    ctx.renderPage = () =>
-      renderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
-      });
+    ctx.renderPage = () => renderPage({
+      enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+    });
 
     const { styles, ...initialProps } = await Document.getInitialProps(ctx);
 

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import styled from 'styled-components';
 
