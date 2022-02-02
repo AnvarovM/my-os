@@ -1,15 +1,11 @@
-import Head from 'next/head';
+/* eslint-disable import/no-unresolved */
+import dynamic from 'next/dynamic';
 import type { ReactElement } from 'react';
-import Title from 'styles/generic/Title';
+
+const DynamicComponent = dynamic(() => import('components/apps/HelloWorld'));
 
 export default function Home(): ReactElement {
   return (
-    <div>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <Title>Hi how are you?</Title>
-    </div>
+    <DynamicComponent />
   );
 }

@@ -41,12 +41,12 @@
         "comma-dangle": ["error", "never"],
         "linebreak-style": 0,
         "max-lines": ["error", 80],
-        "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "react/jsx-props-no-spreading": "off",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
+        "semi": ["error", "always"],
         "simple-import-sort/imports": "error",
-        "simple-import-sort/exports": "error",
-        "semi": ["error", "always"]
+        "simple-import-sort/exports": "error"
     }
 }
