@@ -1,17 +1,15 @@
+/* eslint-disable import/no-unresolved */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { render } from '@testing-library/react';
+import StyledApp from 'components/pages/StyledApps';
 // eslint-disable-next-line import/no-unresolved
 import Index from 'pages/index';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { ThemeProvider } from 'styled-components';
-// eslint-disable-next-line import/no-unresolved
-import defaultTheme from 'themes/default.json';
 
 test('renders index page', () => {
   const { getByText } = render(
-    <ThemeProvider theme={defaultTheme}>
+    <StyledApp>
       <Index />
-    </ThemeProvider>
+    </StyledApp>
   );
   // eslint-disable-next-line testing-library/prefer-screen-queries
   const howAreYou = getByText('Hi how are you?');

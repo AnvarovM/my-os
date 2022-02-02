@@ -16,7 +16,6 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:testing-library/react"
-
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -26,17 +25,28 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "jest", "jest-dom", "react", "simple-import-sort", "testing-library"],
+  "plugins": [
+    "@typescript-eslint",
+    "jest",
+    "jest-dom",
+    "react",
+    "simple-import-sort",
+    "testing-library"
+  ],
   "rules": {
-    "@typescript-eslint/consistent-type-imports": ["error", {"prefer": "type-imports"}],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports" }
+    ],
     "comma-dangle": ["error", "never"],
+    "linebreak-style": 0,
     "max-lines": ["error", 80],
     "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "semi": ["error", "always"],
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "linebreak-style": 0
+    "react/prop-types": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "semi": ["error", "always"]
   }
 }
