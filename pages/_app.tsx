@@ -6,17 +6,17 @@ import { description, name } from 'package.json';
 import type { ReactElement } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
-  return (
-    <>
-      <Head>
-        <title>{name}</title>
-        <meta name="description" content={description} />
-      </Head>
-      <StyledApp>
-        <Component {...pageProps} />
-      </StyledApp>
-    </>
-  );
+    return (
+        <>
+            <Head>
+                <title>{name}</title>
+                <meta name="description" content={description} />
+            </Head>
+            <StyledApp>
+                <Component {...pageProps} />
+            </StyledApp>
+        </>
+    );
 }
 
 export default MyApp;

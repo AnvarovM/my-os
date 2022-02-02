@@ -1,11 +1,11 @@
 name: Test
 on: push
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Modules
-        run: npm install
-      - name: Run Tests
-        run: npm test
+    tests:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Install Modules
+              run: npm install
+            - name: Run Tests
+              run: npm test

@@ -1,52 +1,52 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true,
-    "node": true
-  },
-  "extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
-    "plugin:import/typescript",
-    "plugin:jest-dom/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:testing-library/react"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true,
+        "node": true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "jest",
-    "jest-dom",
-    "react",
-    "simple-import-sort",
-    "testing-library"
-  ],
-  "rules": {
-    "@typescript-eslint/consistent-type-imports": [
-      "error",
-      { "prefer": "type-imports" }
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "plugin:import/typescript",
+        "plugin:jest-dom/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:testing-library/react"
     ],
-    "comma-dangle": ["error", "never"],
-    "linebreak-style": 0,
-    "max-lines": ["error", 80],
-    "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
-    "react/jsx-props-no-spreading": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "semi": ["error", "always"]
-  }
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "jest-dom",
+        "react",
+        "simple-import-sort",
+        "testing-library"
+    ],
+    "rules": {
+        "@typescript-eslint/consistent-type-imports": [
+            "error",
+            { "prefer": "type-imports" }
+        ],
+        "comma-dangle": ["error", "never"],
+        "linebreak-style": 0,
+        "max-lines": ["error", 80],
+        "react/jsx-filename-extension": [2, { "extensions": [".tsx"] }],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "semi": ["error", "always"]
+    }
 }

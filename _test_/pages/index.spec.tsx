@@ -6,12 +6,11 @@ import StyledApp from 'components/pages/StyledApps';
 import Index from 'pages/index';
 
 test('renders index page', () => {
-  const { getByText } = render(
-    <StyledApp>
-      <Index />
-    </StyledApp>
-  );
-  // eslint-disable-next-line testing-library/prefer-screen-queries
-  const howAreYou = getByText('Hi how are you?');
-  expect(howAreYou).toBeInTheDocument();
+    const { getByText } = render(
+        <StyledApp>
+            <Index />
+        </StyledApp>
+    );
+    // eslint-disable-next-line testing-library/prefer-screen-queries
+    expect(getByText('Hi how are you?')).toBeInTheDocument();
 });

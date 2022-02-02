@@ -1,7 +1,7 @@
 {
-  "default": {
-    "colors": {
-      "primary": "#f3a600"
+    "default": {
+        "colors": {
+            "primary": "#f3a600"
+        }
     }
-  }
 }

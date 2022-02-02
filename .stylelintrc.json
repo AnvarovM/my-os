@@ -1,12 +1,12 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-styled-components",
-    "stylelint-config-standard-scss",
-    "stylelint-config-sass-guidelines"
-  ],
-  "rules": {
-    "no-empty-source": null
-  },
-  "processors": ["stylelint-processor-styled-components"]
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-styled-components",
+        "stylelint-config-standard-scss",
+        "stylelint-config-sass-guidelines"
+    ],
+    "rules": {
+        "no-empty-source": null
+    },
+    "processors": ["stylelint-processor-styled-components"]
 }
