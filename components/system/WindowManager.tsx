@@ -1,6 +1,5 @@
 /* eslint-disable import/no-unresolved */
 import { ProcessConsumer } from 'contexts/process';
-import type { FC } from 'react';
 
 function WindowManager() {
   return (
