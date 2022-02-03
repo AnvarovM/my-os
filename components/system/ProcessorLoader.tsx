@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { ProcessConsumer } from 'contexts/process';
 
-function WindowManager() {
+function ProcessorLoader() {
   return (
     <ProcessConsumer>
       {({ processes }) => Object.entries(processes).map(([id, { Component }]) => (
@@ -11,4 +11,4 @@ function WindowManager() {
   );
 }
 
-export default WindowManager;
+export default ProcessorLoader;

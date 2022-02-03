@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import WindowManager from 'components/system/WindowManager';
+import ProcessorLoader from 'components/system/ProcessorLoader';
 import { ProcessProvider } from 'contexts/process';
 import type { ReactElement } from 'react';
 // import processDirectory from 'utils/processDirectory';
@@ -7,7 +7,7 @@ import type { ReactElement } from 'react';
 export default function Home(): ReactElement {
   return (
     <ProcessProvider>
-      <WindowManager />
+      <ProcessorLoader />
     </ProcessProvider>
   );
 }
