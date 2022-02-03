@@ -6,10 +6,12 @@ import type { StyledAppProps } from 'types/components/pages/StyledApp';
 
 function StyledApp({ children }: StyledAppProps): JSX.Element {
   return (
-    <ThemeProvider theme={themes.default}>
+    <>
       <GlobalStyle />
-      {children}
-    </ThemeProvider>
+      <ThemeProvider theme={themes.default}>
+        {children}
+      </ThemeProvider>
+    </>
   );
 }
 
