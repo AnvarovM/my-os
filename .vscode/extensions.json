@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+        "jonkwheeler.styled-components-snippets",
+        "stylelint.vscode-stylelint"
+	]
+}
