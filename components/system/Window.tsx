@@ -1,10 +1,9 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { ReactNode } from 'react';
 import React from 'react';
 import StyleWindow from 'styles/components/system/StyledWindow';
 
-function Window({ children }: ReactNode): JSX.Element {
+function Window({ children }: any): JSX.Element {
   return (
     <div>
       <StyleWindow>{children}</StyleWindow>
