@@ -4,9 +4,10 @@ import useContextContextState from 'hooks/useContextContextState';
 import type { FC } from 'react';
 import { createContext } from 'react';
 import type { ProcessContextState } from 'types/context/process';
+import { initailProcessContextState } from 'utils/initailContextState';
 import processDirectory from 'utils/processDirectory';
 
-const ProcessContext = createContext<ProcessContextState>({ processes: {} });
+const ProcessContext = createContext<ProcessContextState>(initailProcessContextState);
 
 // eslint-disable-next-line react/function-component-definition
 export const ProcessProvider: FC = ({ children }) => (

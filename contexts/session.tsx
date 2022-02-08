@@ -4,9 +4,10 @@ import useSessionContextState from 'hooks/useSessionContextState';
 import type { FC } from 'react';
 import { createContext } from 'react';
 import type { SessionContextState } from 'types/context/session';
+import { initailSessionContextState } from 'utils/initailContextState';
 
 // SessionContextState
-const SessionContext = createContext<SessionContextState>({ theme: undefined });
+const SessionContext = createContext<SessionContextState>(initailSessionContextState);
 
 // eslint-disable-next-line react/function-component-definition
 export const SessionProvider: FC = ({ children }) => (

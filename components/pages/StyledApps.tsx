@@ -3,6 +3,7 @@
 import { SessionConsumer } from 'contexts/session';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
+import themes from 'styles/themes.json';
 import type { StyledAppProps } from 'types/components/pages/StyledApp';
 
 function StyledApp({ children }: StyledAppProps): JSX.Element {
@@ -11,7 +12,7 @@ function StyledApp({ children }: StyledAppProps): JSX.Element {
       <GlobalStyle />
       <SessionConsumer>
         {({ theme }) => (
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeProvider theme={theme || themes.default}>{children}</ThemeProvider>
         )}
       </SessionConsumer>
     </>
