@@ -7,15 +7,15 @@ import type { SessionContextState } from 'types/context/session';
 import { initailSessionContextState } from 'utils/initailContextState';
 
 // SessionContextState
-const SessionContext = createContext<SessionContextState>(
+const { Provider, Consumer } = createContext<SessionContextState>(
   initailSessionContextState
 );
 
 // eslint-disable-next-line react/function-component-definition
 export const SessionProvider: FC = ({ children }) => (
-  <SessionContext.Provider value={useSessionContextState()}>
+  <Provider value={useSessionContextState()}>
     {children}
-  </SessionContext.Provider>
+  </Provider>
 );
 
-export const SessionConsumer = SessionContext.Consumer;
+export const SessionConsumer = Consumer;

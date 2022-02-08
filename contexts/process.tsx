@@ -6,15 +6,15 @@ import { createContext } from 'react';
 import type { ProcessContextState, ProcessProviderProps } from 'types/context/process';
 import { initailProcessContextState } from 'utils/initailContextState';
 
-const ProcessContext = createContext<ProcessContextState>(
+const { Provider, Consumer } = createContext<ProcessContextState>(
   initailProcessContextState
 );
 
 // eslint-disable-next-line react/function-component-definition
 export const ProcessProvider: FC<ProcessProviderProps> = ({ children, startupProccesses }) => (
-  <ProcessContext.Provider value={useContextContextState(startupProccesses)}>
+  <Provider value={useContextContextState(startupProccesses)}>
     {children}
-  </ProcessContext.Provider>
+  </Provider>
 );
 
-export const ProcessConsumer = ProcessContext.Consumer;
+export const ProcessConsumer = Consumer;
