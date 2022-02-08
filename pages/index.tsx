@@ -2,11 +2,11 @@
 import ProcessorLoader from 'components/system/ProcessorLoader';
 import { ProcessProvider } from 'contexts/process';
 import type { ReactElement } from 'react';
-// import processDirectory from 'utils/processDirectory';
+import { getStartupProcesses } from 'utils/processDirectory';
 
 export default function Home(): ReactElement {
   return (
-    <ProcessProvider>
+    <ProcessProvider startupProccesses={getStartupProcesses()}>
       <ProcessorLoader />
     </ProcessProvider>
   );

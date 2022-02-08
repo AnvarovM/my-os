@@ -11,6 +11,6 @@ test('renders index page', () => {
       <Index />
     </StyledApp>
   );
-    // eslint-disable-next-line testing-library/prefer-screen-queries
+  // eslint-disable-next-line testing-library/prefer-screen-queries
   expect(getByText('Hi how are you?')).toBeInTheDocument();
 });

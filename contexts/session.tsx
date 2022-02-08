@@ -7,7 +7,9 @@ import type { SessionContextState } from 'types/context/session';
 import { initailSessionContextState } from 'utils/initailContextState';
 
 // SessionContextState
-const SessionContext = createContext<SessionContextState>(initailSessionContextState);
+const SessionContext = createContext<SessionContextState>(
+  initailSessionContextState
+);
 
 // eslint-disable-next-line react/function-component-definition
 export const SessionProvider: FC = ({ children }) => (

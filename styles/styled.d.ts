@@ -1,10 +1,10 @@
 import 'styled-components';
 
 declare module 'styled-components' {
-    export interface DefaultTheme {
-        colors: {
-            primary: string;
-            window: string;
-        };
-    }
+  export interface DefaultTheme {
+    colors: {
+      primary: string;
+      window: string;
+    };
+  }
 }
