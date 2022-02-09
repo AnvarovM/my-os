@@ -1,32 +1,12 @@
-// /* eslint-disable import/no-unresolved */
-// import WAVES from 'libs/vanta.waves.min';
-// import type { RefObject } from 'react';
-// import { useEffect } from 'react';
-// import * as THREE from 'three';
+/* eslint-disable import/no-unresolved */
+import React from 'react';
+import { ThemeContext } from 'styled-components';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import * as THREE from 'three';
 
-// const vantaJsSettings = {
-//   gyroControls: false,
-//   mouseControls: false,
-//   color: 'red',
-//   touchControls: false,
-//   shininess: 35,
-//   waveHeight: 15,
-//   waveSpeed: 0.25,
-//   zoom: 0.95
-// };
+const useWallpaper = (desktopRef: React.RefObject<HTMLElement>): void => {
+  const { wallpaper } = React.useContext(ThemeContext);
+  React.useEffect(() => wallpaper?.(desktopRef), [desktopRef, wallpaper]);
+};
 
-// const useWallpaper = (refElement: RefObject<HTMLElement>): void => {
-//   useEffect(() => {
-//     const vantaEffect = WAVES({
-//       el: refElement.current,
-//       THREE,
-//       ...vantaJsSettings
-//     });
-
-//     return () => {
-//       vantaEffect.destroy();
-//     };
-//   }, [refElement]);
-// };
-
-// export default useWallpaper;
+export default useWallpaper;

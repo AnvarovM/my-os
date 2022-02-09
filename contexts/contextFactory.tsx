@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { ContextFactory } from 'types/context/contextFactory';
 
@@ -22,4 +21,3 @@ const contextFactory: ContextFactory = (
 };
 
 export default contextFactory;
-

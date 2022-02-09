@@ -1,5 +1,7 @@
 import 'styled-components';
 
+import type { WallpaperEffect } from 'types/styles/wallpaper';
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
@@ -7,5 +9,6 @@ declare module 'styled-components' {
       primary: string;
       window: string;
     };
+    wallpaper: WallpaperEffect;
   }
 }
