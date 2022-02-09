@@ -7,10 +7,10 @@ import { getStartupProcesses } from 'utils/processDirectory';
 
 export default function Home(): ReactElement {
   return (
-    <ProcessProvider startupProccesses={getStartupProcesses()}>
-      <Desktop>
+    <Desktop>
+      <ProcessProvider startupProccesses={getStartupProcesses()}>
         <ProcessorLoader />
-      </Desktop>
-    </ProcessProvider>
+      </ProcessProvider>
+    </Desktop>
   );
 }
