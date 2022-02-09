@@ -1,22 +1,21 @@
+/* eslint-disable react/function-component-definition */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import { SessionConsumer } from 'contexts/session';
+import type { FC } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
-import themes from 'styles/themes.json';
-import type { StyledAppProps } from 'types/components/pages/StyledApp';
+import themes from 'styles/themes';
 
-function StyledApp({ children }: StyledAppProps): JSX.Element {
-  return (
-    <>
-      <GlobalStyle />
-      <SessionConsumer>
-        {({ theme }) => (
-          <ThemeProvider theme={theme || themes.default}>{children}</ThemeProvider>
-        )}
-      </SessionConsumer>
-    </>
-  );
-}
+const StyledApp: FC = ({ children }) => (
+  <>
+    <GlobalStyle />
+    <SessionConsumer>
+      {({ themeName }) => (
+        <ThemeProvider theme={themes[themeName] || themes.defaultTheme}>{children}</ThemeProvider>
+      )}
+    </SessionConsumer>
+  </>
+);
 
 export default StyledApp;
