@@ -8,7 +8,7 @@ import { getStartupProcesses } from 'utils/processDirectory';
 export default function Home(): ReactElement {
   return (
     <Desktop>
-      <ProcessProvider startupProccesses={getStartupProcesses()}>
+      <ProcessProvider startupProcesses={getStartupProcesses()}>
         <ProcessorLoader />
       </ProcessProvider>
     </Desktop>

@@ -1,8 +1,9 @@
+/* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-unresolved */
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/context/process';
 
-const STARUP_PROCESSE: string[] = [
+const STARTUP_PROCESSES: string[] = [
   'HelloWorld'
 ];
 
@@ -13,7 +14,9 @@ export const processDirectory: Processes = {
   }
 };
 
-export const getStartupProcesses = (): Processes => STARUP_PROCESSE.reduce((acc, id) => ({
-  ...acc,
-  [id]: processDirectory[id]
+export const getStartupProcesses = (): Processes =>
+  STARTUP_PROCESSES.reduce(
+    (processes, processesId) => ({
+      ...processes,
+      [processesId]: processDirectory[processesId]
 }), {});

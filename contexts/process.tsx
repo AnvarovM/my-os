@@ -11,7 +11,7 @@ const { Provider, Consumer } = createContext<ProcessContextState>(
 );
 
 // eslint-disable-next-line react/function-component-definition
-export const ProcessProvider: FC<ProcessProviderProps> = ({ children, startupProccesses }) => (
+export const ProcessProvider: FC<ProcessProviderProps> = ({ children, startupProcesses: startupProccesses }) => (
   <Provider value={useContextContextState(startupProccesses)}>
     {children}
   </Provider>
