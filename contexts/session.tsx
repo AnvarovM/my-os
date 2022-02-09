@@ -4,11 +4,11 @@ import useSessionContextState from 'hooks/useSessionContextState';
 import type { FC } from 'react';
 import { createContext } from 'react';
 import type { SessionContextState } from 'types/context/session';
-import { initailSessionContextState } from 'utils/initailContextState';
+import { initialSessionContextState } from 'utils/initailContextState';
 
 // SessionContextState
 const { Provider, Consumer } = createContext<SessionContextState>(
-  initailSessionContextState
+  initialSessionContextState
 );
 
 // eslint-disable-next-line react/function-component-definition

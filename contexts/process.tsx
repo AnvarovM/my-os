@@ -4,10 +4,10 @@ import useContextContextState from 'hooks/useContextContextState';
 import type { FC } from 'react';
 import { createContext } from 'react';
 import type { ProcessContextState, ProcessProviderProps } from 'types/context/process';
-import { initailProcessContextState } from 'utils/initailContextState';
+import { initialProcessContextState } from 'utils/initailContextState';
 
 const { Provider, Consumer } = createContext<ProcessContextState>(
-  initailProcessContextState
+  initialProcessContextState
 );
 
 // eslint-disable-next-line react/function-component-definition
