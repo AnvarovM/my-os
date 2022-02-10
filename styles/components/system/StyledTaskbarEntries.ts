@@ -7,7 +7,6 @@ export const StyledStartButton = styled.button`
   left: ${({ theme }) => theme.sizes.StartButton.width};
   position: absolute;
   right: ${({ theme }) => theme.sizes.clock.width};
-  width: 100%;
 `;
 
 export default StyledStartButton;
