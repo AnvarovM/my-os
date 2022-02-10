@@ -6,7 +6,8 @@
     "stylelint-config-sass-guidelines"
   ],
   "rules": {
-    "no-empty-source": null
+    "no-empty-source": null,
+    "value-keyword-case": null 
   },
   "processors": ["stylelint-processor-styled-components"]
 }
