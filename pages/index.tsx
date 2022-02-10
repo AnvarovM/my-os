@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import Desktop from 'components/system/Desktop';
-import ProcessorLoader from 'components/system/ProcessorLoader';
+import ProcessorLoader from 'components/system/Processes/ProcessorLoader';
 import { ProcessProvider } from 'contexts/process';
 import { getStartupProcesses } from 'utils/processDirectory';
 

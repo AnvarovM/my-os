@@ -13,19 +13,22 @@ const disableControls = {
 
 const isWebLAvailable = typeof WebGLRenderingContext !== 'undefined';
 
-const VantaWaves = (settings: VantaWavesSettings): WallpaperEffect => (el) => {
-  const vantaEffect = el && isWebLAvailable
-    ? WAVES({
-      el,
-      THREE,
-      ...disableControls,
-      ...settings
-    })
-    : undefined;
+const VantaWaves =
+  (settings: VantaWavesSettings): WallpaperEffect =>
+  (el) => {
+    const vantaEffect =
+      el && isWebLAvailable
+        ? WAVES({
+            el,
+            THREE,
+            ...disableControls,
+            ...settings
+          })
+        : undefined;
 
-  return () => {
-    vantaEffect?.destroy?.();
+    return () => {
+      vantaEffect?.destroy?.();
+    };
   };
-};
 
 export default VantaWaves;

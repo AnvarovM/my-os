@@ -1,7 +1,5 @@
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
-import Document, {
-  Head, Html, Main, NextScript
-} from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 // eslint-disable-next-line import/no-unresolved
 import withStyledComponents from 'utils/withServerStyleSheet';
 // eslint-disable-next-line import/no-unresolved

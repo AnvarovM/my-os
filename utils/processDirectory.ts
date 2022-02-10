@@ -1,7 +1,6 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable import/no-unresolved */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import HelloWorld from 'components/apps/HelloWorld';
 import dynamic from 'next/dynamic';
 import type { Processes } from 'types/context/process';
 

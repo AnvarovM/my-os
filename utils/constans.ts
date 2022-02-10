@@ -5,7 +5,8 @@ export const zindexLevelSize = 100;
 export const iconsZindexLevel = 1;
 export const windowsZindexLevel = 2;
 export const taskbarZindexLevel = 3;
-export const foregroundZindex = baseZindex + windowsZindexLevel * zindexLevelSize + zindexLevelSize / 2;
+export const foregroundZindex =
+  baseZindex + windowsZindexLevel * zindexLevelSize + zindexLevelSize / 2;
 
 export const WINDOW_PADDING = 15;
 export const TASKBAR_HEIGHT = 30;
