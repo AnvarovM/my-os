@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import type { Themes } from 'types/styles/themes';
 import VantaWaves from 'utils/vantaWaves';
 

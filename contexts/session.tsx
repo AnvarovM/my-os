@@ -12,9 +12,7 @@ const { Provider, Consumer } = React.createContext<SessionContextState>(
 
 // eslint-disable-next-line react/function-component-definition
 export const SessionProvider: React.FC = ({ children }) => (
-  <Provider value={useSessionContextState()}>
-    {children}
-  </Provider>
+  <Provider value={useSessionContextState()}>{children}</Provider>
 );
 
 export const SessionConsumer = Consumer;

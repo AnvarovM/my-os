@@ -4,9 +4,14 @@ import { ThemeContext } from 'styled-components';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as THREE from 'three';
 
-const useWallpaper = (desktopRef: React.RefObject<HTMLElement>): void => {
+const useWallpaper = (
+  desktopRef: React.RefObject<HTMLElement | null>
+): void => {
   const { wallpaper } = React.useContext(ThemeContext);
-  React.useEffect(() => wallpaper?.(desktopRef), [desktopRef, wallpaper]);
+  React.useEffect(
+    () => wallpaper?.(desktopRef.current),
+    [desktopRef, wallpaper]
+  );
 };
 
 export default useWallpaper;

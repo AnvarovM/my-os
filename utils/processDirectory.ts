@@ -18,7 +18,10 @@ export const processDirectory: Processes = {
 };
 
 export const getStartupProcesses = (): Processes =>
-  STARTUP_PROCESSES.reduce((processes, processesId) => ({
-    ...processes,
-    [processesId]: processDirectory[processesId]
-  }), {});
+  STARTUP_PROCESSES.reduce(
+    (processes, processesId) => ({
+      ...processes,
+      [processesId]: processDirectory[processesId]
+    }),
+    {}
+  );
