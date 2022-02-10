@@ -7,6 +7,7 @@ const Window = ({ children }: any): JSX.Element => {
       <StyleWindow>{children}</StyleWindow>
     </div>
   );
+  
 };
 
 export default Window;
