@@ -7,7 +7,7 @@ export const StyledClock = styled.time`
   position: absolute;
   right: 0;
   text-align: center;
-  width: 90px;
+  width: ${({ theme }) => theme.sizes.clock.width};
 `;
 
 export default StyledClock;

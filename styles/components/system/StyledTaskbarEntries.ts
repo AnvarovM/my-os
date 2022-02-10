@@ -4,9 +4,9 @@ export const StyledStartButton = styled.button`
   background-color: #1cbea2;
   color: #fff;
   height: 100%;
-  left: 30px;
+  left: ${({ theme }) => theme.sizes.StartButton.width};
   position: absolute;
-  right: 90px;
+  right: ${({ theme }) => theme.sizes.clock.width};
   width: 100%;
 `;
 
