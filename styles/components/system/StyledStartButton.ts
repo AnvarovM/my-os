@@ -9,7 +9,7 @@ const centered = `
 export const StyledStartButton = styled.button`
   background-color: #1cbe21;
   color: #fff;
-  cursor: pointer;
+  /* cursor: pointer; */
   height: 100%;
   left: 0;
   ${centered};
