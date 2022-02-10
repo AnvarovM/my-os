@@ -3,6 +3,6 @@
 		"dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
       "jonkwheeler.styled-components-snippets",
-        stylelint.vscode-stylelint"
+        "stylelint.vscode-stylelint"
 	]
 }
