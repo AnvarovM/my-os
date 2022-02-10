@@ -10,7 +10,7 @@ const wallpaper = VantaWaves({
   gyroControls: true,
   mouseControls: false,
   touchControls: false,
-  color: 0x5559,
+  color: 0x113657,
   shininess: 35,
   waveHeight: 15,
   waveSpeed: 0.25,
