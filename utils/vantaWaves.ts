@@ -1,10 +1,18 @@
 import * as THREE from 'three';
-import type {
-  VantaWavesSettings,
-  WallpaperEffect
-} from 'types/styles/wallpaper';
+import type { WallpaperEffect } from 'types/styles/wallpaper';
 /* @ts-expect-error No declaration file is required */
 import WAVES from 'vanta/dist/vanta.waves.min';
+
+type VantaWavesSettings = {
+  gyroControls: boolean;
+  mouseControls: boolean;
+  touchControls: boolean;
+  shininess: number;
+  color: number;
+  waveHeight: number;
+  waveSpeed: number;
+  zoom: number;
+};
 
 const disableControls = {
   mouseControls: false,
