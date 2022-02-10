@@ -27,6 +27,7 @@ const fonts = {
 
 const sizes = {
   taskbar: {
+    blur: '5px',
     entry: {
       maxWidth: '161px'
     },

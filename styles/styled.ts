@@ -17,6 +17,7 @@ declare module 'styled-components' {
     };
     sizes: {
       taskbar: {
+        blur: string;
         entry: {
           maxWidth: string;
         };
