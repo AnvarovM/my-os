@@ -7,7 +7,7 @@ const centered = `
 `;
 
 export const StyledTaskbarEntry = styled.li`
-  background-color: yellow;
+  background-color: #ff0;
   color: #252525;
   height: 100%;
   ${centered};

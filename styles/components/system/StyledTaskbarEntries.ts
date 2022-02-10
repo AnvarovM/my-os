@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledStartButton = styled.button`
+export const StyledStartButton = styled.ul`
   background-color: #1cbea2;
   color: #fff;
   height: 100%;

@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const StyledTaskbar = styled.nav`
+export const StyledTaskbar = styled.footer`
   background-color: #252525;
   bottom: 0;
   font-size: 30px;
