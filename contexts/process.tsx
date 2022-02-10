@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-/* eslint-disable import/no-unresolved */
 import useProcessContextState from 'hooks/useProcessContextState';
 import React from 'react';
 import type {

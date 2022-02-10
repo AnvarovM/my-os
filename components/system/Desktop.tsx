@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import useWallpaper from 'hooks/useWallpaper';
 import { useRef } from 'react';
 import StyledDesktop from 'styles/components/system/StyledDesktop';

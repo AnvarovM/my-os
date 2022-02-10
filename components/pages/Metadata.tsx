@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable import/no-unresolved */
 import Head from 'next/head';
 import packageJson from 'package.json';
 import type { FC } from 'react';

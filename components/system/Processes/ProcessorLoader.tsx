@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable import/no-unresolved */
 import Window from 'components/system/Window';
 import { ProcessConsumer } from 'contexts/process';
 

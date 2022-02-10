@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { ThemeContext } from 'styled-components';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

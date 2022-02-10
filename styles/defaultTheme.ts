@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import VantaWaves from 'utils/vantaWaves';
 
 const colors = {

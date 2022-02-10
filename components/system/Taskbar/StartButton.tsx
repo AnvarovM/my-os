@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-named-as-default */
 import StyledStartButton from 'styles/components/system/StyledStartButton';
 
 const Taskbar: React.FC = () => (

@@ -41,6 +41,17 @@
       { "prefer": "type-imports" }
     ],
     "comma-dangle": ["error", "never"],
+    "import/no-unresolved": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "linebreak-style": 0,
     "max-lines": ["error", 80],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
@@ -57,5 +68,13 @@
     "semi": ["error", "always"],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "react": {
+      "version": "detect"
+    }
   }
 }

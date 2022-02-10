@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import Metadata from 'components/pages/Metadata';
 import StyledApp from 'components/pages/StyledApps';
 import { SessionProvider } from 'contexts/session';

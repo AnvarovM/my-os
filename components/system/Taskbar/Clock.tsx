@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-named-as-default */
 import StyledClock from 'styles/components/system/StyledClock';
 
 const Clock: React.FC = () => (
