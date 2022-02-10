@@ -2,11 +2,9 @@
 import VantaWaves from 'utils/vantaWaves';
 
 const colors = {
-  colors: {
-    primary: '#252525',
-    window: '#1bc321',
-    backgroundColor: '#4b0082'
-  }
+  primary: '#252525',
+  window: '#1bc321',
+  backgroundColor: '#4b0082'
 };
 
 const wallpaper = VantaWaves({
