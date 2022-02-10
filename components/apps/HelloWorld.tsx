@@ -1,8 +1,5 @@
-/* eslint-disable import/no-unresolved */
-import Title from 'styles/generic/Title';
-
 function HelloWorld(): JSX.Element {
-  return <Title>Hi how are you?</Title>;
+  return <h1>Hi how are you?</h1>;
 }
 
 export default HelloWorld;
