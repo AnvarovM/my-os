@@ -6,7 +6,9 @@ const centered = `
   place-items: center;
 `;
 
-export const StyledStartButton = styled.button`
+export const StyledStartButton = styled.button.attrs(() => ({
+  type: 'button'
+}))`
   background-color: #1cbe21;
   color: #fff;
   /* cursor: pointer; */

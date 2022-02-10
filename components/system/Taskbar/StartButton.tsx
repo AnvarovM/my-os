@@ -2,9 +2,7 @@
 import StyledStartButton from 'styles/components/system/StyledStartButton';
 
 const Taskbar = (): JSX.Element => (
-  <StyledStartButton type="button" title="start">
-    X
-  </StyledStartButton>
+  <StyledStartButton title="start">X</StyledStartButton>
 );
 
 export default Taskbar;

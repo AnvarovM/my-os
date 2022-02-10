@@ -1,9 +1,11 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
-    "editor.formatOnSave": true 
+    "editor.formatOnSave": true
   },
   "cSpell.words": [
+    "Anvarov",
+    "Muxammad",
     "stylelint",
     "vanta"
   ]
