@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import { SessionConsumer } from 'contexts/session';
 import { ThemeProvider } from 'styled-components';

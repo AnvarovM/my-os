@@ -12,7 +12,6 @@ const { Provider, Consumer } = React.createContext<ProcessContextState>(
   initialProcessContextState
 );
 
-// eslint-disable-next-line react/function-component-definition
 export const ProcessProvider: React.FC<ProcessProviderProps> = ({
   children,
   startupProcesses

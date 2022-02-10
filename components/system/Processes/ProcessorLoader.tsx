@@ -3,7 +3,7 @@
 import Window from 'components/system/Window';
 import { ProcessConsumer } from 'contexts/process';
 
-function ProcessorLoader() {
+const ProcessorLoader = () => {
   return (
     <ProcessConsumer>
       {({ processes }) =>
@@ -19,6 +19,6 @@ function ProcessorLoader() {
       }
     </ProcessConsumer>
   );
-}
+};
 
 export default ProcessorLoader;

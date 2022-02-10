@@ -4,7 +4,7 @@ import StyledApp from 'components/pages/StyledApps';
 import { SessionProvider } from 'contexts/session';
 import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
+const MyApp = ({ Component, pageProps }: AppProps): React.ReactElement => {
   return (
     <>
       <Metadata />
@@ -15,6 +15,6 @@ function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
       </SessionProvider>
     </>
   );
-}
+};
 
 export default MyApp;

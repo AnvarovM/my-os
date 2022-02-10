@@ -1,10 +1,12 @@
+/* eslint-disable react/function-component-definition */
 /* eslint-disable import/no-unresolved */
 import Head from 'next/head';
 import packageJson from 'package.json';
+import type { FC } from 'react';
 
 const { description, name } = packageJson;
 
-function Metadata(): JSX.Element {
+const Metadata: FC = () => {
   return (
     <Head>
       <meta
@@ -15,6 +17,6 @@ function Metadata(): JSX.Element {
       <title>{name}</title>
     </Head>
   );
-}
+};
 
 export default Metadata;

@@ -8,7 +8,6 @@ const contextFactory: ContextFactory = (
   // SessionContextState
   const { Provider, Consumer } = React.createContext(initialContextState);
 
-  // eslint-disable-next-line react/function-component-definition
   const ProcessesProvider: React.FC = ({ children }) => (
     <Provider value={useContextState()}>{children}</Provider>
   );

@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 /* eslint-disable import/no-unresolved */
 import StyledClock from 'styles/components/system/StyledClock';
 
