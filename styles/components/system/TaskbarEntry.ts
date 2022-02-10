@@ -7,8 +7,7 @@ const centered = `
 `;
 
 export const StyledTaskbarEntry = styled.li`
-  background-color: #ff0;
-  color: #252525;
+  color: #fff;
   font-size: 13px;
   height: 100%;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};

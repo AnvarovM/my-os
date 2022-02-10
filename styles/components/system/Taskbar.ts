@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const StyledTaskbar = styled.footer`
-  background-color: #252525;
+  background-color: ${({ theme }) => theme.colors.taskbar};
   bottom: 0;
   font-size: 30px;
   height: ${({ theme }) => theme.sizes.taskbar.height};

@@ -10,5 +10,14 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     padding: 0;
   }
+
+  button {
+    background-color: unset;
+  }
+
+  ol,
+  li {
+    text-decoration: none;
+  }
 `;
 export default GlobalStyle;
