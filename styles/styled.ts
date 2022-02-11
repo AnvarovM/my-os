@@ -7,13 +7,9 @@ declare module 'styled-components' {
     colors: {
       backgroundColor: string;
       primary: string;
+      startButton: string;
       taskbar: string;
       window: string;
-    };
-    fonts: {
-      clock: {
-        size: string;
-      };
     };
     sizes: {
       taskbar: {
@@ -24,9 +20,11 @@ declare module 'styled-components' {
         height: string;
       };
       clock: {
+        fontSize: string;
         width: string;
       };
       StartButton: {
+        size: string;
         width: string;
       };
     };

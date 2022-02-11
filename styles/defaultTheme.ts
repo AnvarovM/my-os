@@ -4,6 +4,7 @@ import VantaWaves from 'utils/vantaWaves';
 const colors = {
   backgroundColor: '#4b0082',
   primary: '#252525',
+  startButton: '#fff',
   window: '#1bc321',
   taskbar: 'rgba(0, 0, 0, 0.6)'
 };
@@ -19,12 +20,6 @@ const wallpaper = VantaWaves({
   zoom: 0.95
 });
 
-const fonts = {
-  clock: {
-    size: '14px'
-  }
-};
-
 const sizes = {
   taskbar: {
     blur: '5px',
@@ -34,13 +29,15 @@ const sizes = {
     height: '30px'
   },
   clock: {
+    fontSize: '15px',
     width: '76px'
   },
   StartButton: {
+    size: '18px',
     width: '36px'
   }
 };
 
-const defaultTheme: DefaultTheme = { colors, fonts, sizes, wallpaper };
+const defaultTheme: DefaultTheme = { colors, sizes, wallpaper };
 
 export default defaultTheme;

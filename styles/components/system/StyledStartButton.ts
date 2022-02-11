@@ -9,8 +9,9 @@ const centered = `
 export const StyledStartButton = styled.button.attrs(() => ({
   type: 'button'
 }))`
-  color: #fff;
+  color: ${({ theme }) => theme.colors.startButton};
   height: 100%;
+  font-size: ${({ theme }) => theme.sizes.StartButton.size};
   left: 0;
   ${centered};
   position: absolute;
