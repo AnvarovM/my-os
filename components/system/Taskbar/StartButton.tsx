@@ -3,7 +3,6 @@ import { faWindows } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import StyledStartButton from 'styles/components/system/StyledStartButton';
 
-
 const Taskbar = (): JSX.Element => (
   <StyledStartButton title="start">
     <FontAwesomeIcon icon={faWindows} />
