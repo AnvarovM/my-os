@@ -23,7 +23,7 @@ const useLocaleTimeDate = (now: Date): LocaleTimeDate => {
       hour12: true
     }).format(now),
     dateTime: now.toISOString()
-  }
+  };
 };
 
 export default useLocaleTimeDate;

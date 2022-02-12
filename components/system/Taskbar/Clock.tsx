@@ -14,7 +14,7 @@ const Clock = (): JSX.Element => {
 
   return (
     <StyledClock dateTime={dateTime} title={date} suppressHydrationWarning>
-      2{time}
+      {time}
     </StyledClock>
   );
 };

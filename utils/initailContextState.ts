@@ -1,7 +1,11 @@
+import type { FileSystemContextState } from 'types/context/fileSystem';
 import type { ProcessContextState } from 'types/context/process';
 import type { SessionContextState } from 'types/context/session';
 
-/* eslint-disable import/prefer-default-export */
+export const initialFileSystemContextState: FileSystemContextState = {
+  fs: null
+};
+
 export const initialProcessContextState: ProcessContextState = {
   processes: {}
 };
