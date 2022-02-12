@@ -1,9 +1,13 @@
 {
   "extends": [
-    "stylelint-config-prettier",
-    "stylelint-config-recommended",
-    "stylelint-config-sass-guidelines",
-    "stylelint-config-styled-components"
+    "stylelint-config-standard",
+    "stylelint-config-styled-components",
+    "stylelint-config-standard-scss",
+    "stylelint-config-sass-guidelines"
   ],
+  "rules": {
+    "no-empty-source": null,
+    "value-keyword-case": null
+  },
   "processors": ["stylelint-processor-styled-components"]
 }
