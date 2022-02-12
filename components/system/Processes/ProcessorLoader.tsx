@@ -1,18 +1,18 @@
 import Window from 'components/system/Window';
 import { ProcessConsumer } from 'contexts/process';
 
+const withWindow = (Component: React.ComponentType) => (
+  <Window>
+    <Component />
+  </Window>
+);
+
 const ProcessorLoader = () => {
   return (
     <ProcessConsumer>
       {({ processes }) =>
         Object.entries(processes).map(([id, { Component, hasWindow }]) =>
-          hasWindow ? (
-            <Window key={id}>
-              <Component />
-            </Window>
-          ) : (
-            <Component key={id} />
-          )
+          hasWindow ? withWindow(Component) : <Component key={id} />
         )
       }
     </ProcessConsumer>
