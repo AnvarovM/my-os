@@ -20,7 +20,7 @@ const useFileSystemContextState = (): FileSystemContextState => {
         }
       );
     }
-  }, [setFs]);
+  }, []);
 
   return { fs };
 };
