@@ -5,7 +5,7 @@ import React from 'react';
 import StyledClock from 'styles/components/system/StyledClock';
 
 const Clock = (): JSX.Element => {
-  const [now, setNow] = React.useState(new Date());
+  const [now, setNow] = React.useState<Date>(new Date());
   const { date, time, dateTime } = useLocaleTimeDate(now);
 
   const updateClock = React.useCallback(() => setNow(new Date()), []);

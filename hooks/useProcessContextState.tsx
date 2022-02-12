@@ -4,7 +4,7 @@ import type { ProcessContextState, Processes } from 'types/context/process';
 const useProcessContextState = (
   startupProcesses: Processes
 ): ProcessContextState => {
-  const [processes] = React.useState(startupProcesses);
+  const [processes] = React.useState<Processes>(startupProcesses);
 
   return { processes };
 };
