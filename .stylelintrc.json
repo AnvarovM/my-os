@@ -7,6 +7,8 @@
   ],
   "rules": {
     "no-empty-source": null,
+    "max-nesting-depth": 5,
+    "max-line-length": null,
     "value-keyword-case": null
   },
   "processors": ["stylelint-processor-styled-components"]
