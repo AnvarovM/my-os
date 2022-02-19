@@ -1,19 +1,16 @@
+/* eslint-disable import/no-cycle */
 import dynamic from 'next/dynamic';
-import type { Processes } from 'types/context/process';
+import type { Process } from 'types/context/process';
 
-const STARTUP_PROCESSES: string[] = ['Taskbar'];
-
-export const processDirectory: Processes = {
-  Taskbar: {
-    Component: dynamic(() => import('components/system/Taskbar'))
-  }
+export const HelloWorld: Process = {
+  Component: dynamic(() => import('components/apps/HelloWorld')),
+  hasWindow: true,
+  icon: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png',
+  title: 'Hello again'
 };
 
-export const getStartupProcesses = (): Processes =>
-  STARTUP_PROCESSES.reduce(
-    (processes, processesId) => ({
-      ...processes,
-      [processesId]: processDirectory[processesId]
-    }),
-    {}
-  );
+export const Taskbar: Process = {
+  Component: dynamic(() => import('components/system/Taskbar')),
+  icon: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png',
+  title: 'Hello again'
+};
