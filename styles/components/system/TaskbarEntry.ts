@@ -5,9 +5,7 @@ const centered = `
 `;
 
 export const StyledTaskbarEntry = styled.li`
-  border-bottom: 2px solid #add8e6;
-  color: #fff;
-  font-size: 13px;
+  border-bottom: ${({ theme }) => theme.colors.heightLight};
   height: 100%;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
   ${centered};
@@ -17,13 +15,14 @@ export const StyledTaskbarEntry = styled.li`
     display: flex;
 
     img {
-      height: 18px;
-      margin: 0 5px;
-      width: 18px;
+      font-size: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
+      margin: ${({ theme }) => theme.sizes.taskbar.entry.icon.margin};
+      width: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
     }
 
-    p {
-      text-align: center;
+    figcaption {
+      color: ${({ theme }) => theme.colors.opaqueWhite};
+      font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
     }
   }
 `;

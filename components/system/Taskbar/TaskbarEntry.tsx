@@ -5,7 +5,7 @@ const TaskbarEntry = ({ icon, title }): JSX.Element => (
   <StyledTaskbarEntry>
     <figure>
       <img src={icon} alt="" />
-      <p>{title}</p>
+      <figcaption>{title}</figcaption>
     </figure>
   </StyledTaskbarEntry>
 );

@@ -3,7 +3,8 @@ import VantaWaves from 'utils/vantaWaves';
 
 const colors = {
   backgroundColor: '#4b0082',
-  clockText: 'rgba(255, 255, 255, 80%)',
+  opaqueWhite: 'rgba(255, 255, 255, 80%)',
+  heightLight: '2px solid #add8e6',
   primary: '#252525',
   startButton: '#fff',
   window: '#1bc321',
@@ -25,6 +26,11 @@ const sizes = {
   taskbar: {
     blur: '5px',
     entry: {
+      fontSize: '14px',
+      icon: {
+        margin: '0 5px',
+        size: '18px'
+      },
       maxWidth: '161px'
     },
     height: '30px'

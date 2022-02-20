@@ -11,6 +11,6 @@ export const HelloWorld: Process = {
 
 export const Taskbar: Process = {
   Component: dynamic(() => import('components/system/Taskbar')),
-  icon: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png',
-  title: 'Hello again'
+  icon: '',
+  title: ''
 };

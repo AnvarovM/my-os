@@ -7,7 +7,7 @@ const centered = `
 `;
 
 export const StyledClock = styled.time`
-  color: ${({ theme }) => theme.colors.clockText};
+  color: ${({ theme }) => theme.colors.opaqueWhite};
   font-size: ${({ theme }) => theme.sizes.clock.fontSize};
   height: 100%;
   ${centered};
