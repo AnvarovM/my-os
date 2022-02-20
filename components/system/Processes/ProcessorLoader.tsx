@@ -1,6 +1,5 @@
+import { RenderProcesses } from 'components/system/Processes/RenderProcesses';
 import { ProcessConsumer } from 'contexts/process';
-
-import { RenderProcesses } from './RenderProcesses';
 
 const ProcessorLoader = () => (
   <ProcessConsumer>

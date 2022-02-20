@@ -1,3 +1,4 @@
+import { ProcessConsumer } from 'contexts/process';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import type { Process, Processes } from 'types/context/process';
@@ -18,10 +19,10 @@ const RenderProcess: FC<Process> = ({ Component, hasWindow }) =>
   hasWindow ? withWindow(Component) : <Component />;
 
 // eslint-disable-next-line import/prefer-default-export
-export const RenderProcesses: FC<RenderProcessesProps> = ({ processes }) => (
-  <>
-    {Object.entries(processes).map(([id, process]) => (
-      <RenderProcess key={id} {...process} />
-    ))}
-  </>
+export const RenderProcesses: FC<RenderProcessesProps> = () => (
+  <ProcessConsumer>
+    {({ mapProcesses }) =>
+      mapProcesses(([id, process]) => <RenderProcess key={id} {...process} />)
+    }
+  </ProcessConsumer>
 );
