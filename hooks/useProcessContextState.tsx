@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
 import type { ProcessContextState, Processes } from 'types/context/process';
-import { HelloWorld, Taskbar } from 'utils/processDirectory';
+import { HelloWorld } from 'utils/processDirectory';
 // import * as ProcessDirectory from 'utils/processDirectory';
 
 // const closeProcess =
@@ -15,7 +15,7 @@ import { HelloWorld, Taskbar } from 'utils/processDirectory';
 //     : { ...currentProcesses, processId: ProcessDirectory[processId] };
 
 const useProcessContextState = (): ProcessContextState => {
-  const [processes] = React.useState<Processes>({ HelloWorld, Taskbar });
+  const [processes] = React.useState<Processes>({ HelloWorld });
   // const close = (processId: string) => setProcesses(closeProcess(processId));
   // const open = (processId: string) => setProcesses(openProcess(processId));
 

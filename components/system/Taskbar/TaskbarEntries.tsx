@@ -6,7 +6,7 @@ import StyledTaskbarEntries from 'styles/components/system/StyledTaskbarEntries'
 
 const TaskbarEntries: React.FC = () => (
   <StyledTaskbarEntries>
-     <ProcessConsumer>
+    <ProcessConsumer>
       {({ processes }) =>
         Object.entries(processes).map(([id, { icon, title }]) => (
           <TaskbarEntry key={id} icon={icon} title={title} />

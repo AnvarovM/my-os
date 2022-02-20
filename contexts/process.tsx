@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import useProcessContextState from 'hooks/useProcessContextState';
 import React from 'react';
 import type {
@@ -11,12 +12,7 @@ const { Provider, Consumer } = React.createContext<ProcessContextState>(
 );
 
 export const ProcessProvider: React.FC<ProcessProviderProps> = ({
-  children,
-  startupProcesses
-}) => (
-  <Provider value={useProcessContextState(startupProcesses)}>
-    {children}
-  </Provider>
-);
+  children
+}) => <Provider value={useProcessContextState()}>{children}</Provider>;
 
 export const ProcessConsumer = Consumer;
