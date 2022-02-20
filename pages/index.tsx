@@ -10,7 +10,7 @@ const Home: FC = () => {
     <Desktop>
       <ProcessProvider startupProcesses={{}}>
         <Taskbar />
-        <ProcessorLoader />
+        <ProcessorLoader processes={{}} />
       </ProcessProvider>
     </Desktop>
   );
