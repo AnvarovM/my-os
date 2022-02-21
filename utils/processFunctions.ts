@@ -6,7 +6,8 @@ export const closeProcess =
   ({ [processId]: _closeProcess, ...remainingProcesses }: Processes) =>
     remainingProcesses;
 
-export const openProcess = (processId: string) => (currentProcesses: Processes) =>
+export const openProcess =
+  (processId: string) => (currentProcesses: Processes) =>
     currentProcesses[processId] || !processDirectory[processId]
       ? currentProcesses
       : { ...currentProcesses, [processId]: processDirectory[processId] };
