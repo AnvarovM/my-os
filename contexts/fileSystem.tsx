@@ -1,15 +1,15 @@
+import contextFactory from 'contexts/contextFactory';
 import useFileSystemContextState from 'hooks/useFileSystemContextState';
-import React from 'react';
 import type { FileSystemContextState } from 'types/context/fileSystem';
 import { initialFileSystemContextState } from 'utils/initailContextState';
 
-// FileSystemContextState
-const { Provider, Consumer } = React.createContext<FileSystemContextState>(
-  initialFileSystemContextState
+const { Consumer, Provider, useContext } = contextFactory<FileSystemContextState>(
+    initialFileSystemContextState,
+    useFileSystemContextState
 );
 
-export const FileSystemProvider: React.FC = ({ children }) => (
-  <Provider value={useFileSystemContextState()}>{children}</Provider>
-);
-
-export const FileSystemConsumer = Consumer;
+export {
+  Consumer as FileSystemConsumer,
+  Provider as FileSystemProvider,
+  useContext as useFileSystem
+};

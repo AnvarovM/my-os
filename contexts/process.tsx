@@ -1,18 +1,16 @@
 // eslint-disable-next-line import/no-cycle
+import contextFactory from 'contexts/contextFactory';
 import useProcessContextState from 'hooks/useProcessContextState';
-import React from 'react';
-import type {
-  ProcessContextState,
-  ProcessProviderProps
-} from 'types/context/process';
+import type { ProcessContextState } from 'types/context/process';
 import { initialProcessContextState } from 'utils/initailContextState';
 
-const { Provider, Consumer } = React.createContext<ProcessContextState>(
-  initialProcessContextState
+const { Provider, Consumer, useContext } = contextFactory<ProcessContextState>(
+  initialProcessContextState,
+  useProcessContextState
 );
 
-export const ProcessProvider: React.FC<ProcessProviderProps> = ({
-  children
-}) => <Provider value={useProcessContextState()}>{children}</Provider>;
-
-export const ProcessConsumer = Consumer;
+export {
+  Consumer as ProcessConsumer,
+  Provider as ProcessProvider,
+  useContext as useProcess
+};

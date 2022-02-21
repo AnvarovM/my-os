@@ -8,7 +8,7 @@ import type { FC } from 'react';
 const Home: FC = () => {
   return (
     <Desktop>
-      <ProcessProvider startupProcesses={{}}>
+      <ProcessProvider>
         <Taskbar />
         <ProcessorLoader processes={{}} />
       </ProcessProvider>
