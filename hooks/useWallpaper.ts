@@ -1,12 +1,13 @@
+/* eslint-disable max-lines */
 import React from 'react';
-import { ThemeContext } from 'styled-components';
+import { useTheme } from 'styled-components';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import * as THREE from 'three';
 
 const useWallpaper = (
   desktopRef: React.RefObject<HTMLElement | null>
 ): void => {
-  const { wallpaper } = React.useContext(ThemeContext);
+  const { wallpaper } = useTheme();
   React.useEffect(
     () => wallpaper?.(desktopRef.current),
     [desktopRef, wallpaper]
