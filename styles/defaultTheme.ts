@@ -9,7 +9,7 @@ const colors = {
   startButton: '#fff',
   startButtonHover: '#1789D1',
   taskbar: 'rgba(0, 0, 0, 0.6)',
-  taskbarHover: 'hsla(0, 0%, 25%, 70%)',
+  taskbarHover: 'hsla(0, 0%, 30%, 60%)',
   window: '#1bc321'
 };
 
