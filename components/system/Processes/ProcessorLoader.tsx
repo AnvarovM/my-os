@@ -10,7 +10,13 @@ type RenderProcessesProps = {
 const ProcessorLoader: FC<RenderProcessesProps> = () => (
   <ProcessConsumer>
     {({ mapProcesses }) =>
-      mapProcesses(([id, process]) => <RenderProcess key={id} {...process} />)
+      mapProcesses(([id, { Component, hasWindow }]) => (
+        <RenderProcess
+          key={id}
+          Component={Component}
+          hasWindow={Boolean(hasWindow)}
+        />
+      ))
     }
   </ProcessConsumer>
 );

@@ -12,6 +12,7 @@ const withStyledComponents = async (
     ctx.renderPage = () =>
       // eslint-disable-next-line implicit-arrow-linebreak
       renderPage({
+        /* eslint-disable-next-line react/jsx-props-no-spreading */
         enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
       });
 

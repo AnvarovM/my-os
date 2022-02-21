@@ -21,4 +21,4 @@ export type ProcessContextState = {
 
 export type ProcessProviderProps = {
   startupProcesses: Processes;
-}
+};
