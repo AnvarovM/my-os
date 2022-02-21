@@ -16,6 +16,14 @@ export const StyledStartButton = styled.button.attrs(() => ({
   ${centered};
   position: absolute;
   width: ${({ theme }) => theme.sizes.StartButton.width};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.taskbarHover};
+
+    svg {
+      color: ${({ theme }) => theme.colors.startButtonHover};
+    }
+  }
 `;
 
 export default StyledStartButton;

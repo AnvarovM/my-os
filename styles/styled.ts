@@ -10,7 +10,9 @@ declare module 'styled-components' {
       heightLight: string;
       primary: string;
       startButton: string;
+      startButtonHover: string;
       taskbar: string;
+      taskbarHover: string;
       window: string;
     };
     sizes: {

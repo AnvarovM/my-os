@@ -7,8 +7,10 @@ const colors = {
   heightLight: '2px solid #add8e6',
   primary: '#252525',
   startButton: '#fff',
-  window: '#1bc321',
-  taskbar: 'rgba(0, 0, 0, 0.6)'
+  startButtonHover: '#1789D1',
+  taskbar: 'rgba(0, 0, 0, 0.6)',
+  taskbarHover: 'hsla(0, 0%, 25%, 70%)',
+  window: '#1bc321'
 };
 
 const wallpaper = VantaWaves({

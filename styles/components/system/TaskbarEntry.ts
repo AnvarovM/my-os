@@ -25,6 +25,10 @@ export const StyledTaskbarEntry = styled.li`
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
     }
   }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.taskbarHover};
+  }
 `;
 
 export default StyledTaskbarEntry;
