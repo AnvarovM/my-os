@@ -10,8 +10,8 @@ type FileInfo = {
 };
 
 const useFileInfo = (path: string): FileInfo => {
-  const [icon, setIcon] = useState<string>('');
-  const [pid, setPid] = useState<string>('');
+  const [icon, setIcon] = useState('');
+  const [pid, setPid] = useState('');
   const { fs } = useFileSystem();
 
   useEffect(() => {

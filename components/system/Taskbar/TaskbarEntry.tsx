@@ -1,5 +1,5 @@
 /* eslint-disable import/no-named-as-default */
-import StyledTaskbarEntry from 'styles/components/system/TaskbarEntry';
+import StyledTaskbarEntry from 'styles/components/system/Taskbar/TaskbarEntry';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TaskbarEntry = ({ icon, title }: any): JSX.Element => (

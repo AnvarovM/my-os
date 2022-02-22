@@ -12,5 +12,5 @@ const { Provider, Consumer, useContext } = contextFactory<ProcessContextState>(
 export {
   Consumer as ProcessConsumer,
   Provider as ProcessProvider,
-  useContext as useProcess
+  useContext as useProcesses
 };

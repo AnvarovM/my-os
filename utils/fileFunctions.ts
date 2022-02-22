@@ -9,9 +9,12 @@ type Shortcut = {
 /* eslint-disable import/prefer-default-export */
 export const getShortcut = (path: string, fs: FSModule): Promise<Shortcut> =>
   new Promise((resolve) => {
-    fs.readFile(path, (_err, contents = Buffer.from('')) =>
-      resolve(ini.parse(contents.toString()) as Shortcut)
-    );
+    fs.readFile(path, (_error, contents = Buffer.from('')) => {
+      const { InternetShortcut } = ini.parse(contents.toString());
+      if (InternetShortcut) {
+        resolve(InternetShortcut);
+      }
+    });
   });
 
 export const getProcessByFileExtension = (_extension: string): string => '';

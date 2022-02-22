@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/AnvarovM/my-os.git"
   },
-  "author": "Anvarov Muxammad",
+  "author": "Anvarov Muxammad && Justin Brett",
   "license": "MIT",
   "scripts": {
     "build": "npm run build:fs && next build",

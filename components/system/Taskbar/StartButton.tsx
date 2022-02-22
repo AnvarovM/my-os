@@ -1,7 +1,7 @@
 /* eslint-disable import/no-named-as-default */
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import StyledStartButton from 'styles/components/system/StyledStartButton';
+import StyledStartButton from 'styles/components/system/Taskbar/StyledStartButton';
 
 const Taskbar = (): JSX.Element => (
   <StyledStartButton title="start">
