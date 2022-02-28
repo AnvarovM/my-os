@@ -1,4 +1,4 @@
-import type { Processes } from 'types/context/process';
+import type { Processes } from 'utils/processDirectory';
 import { processDirectory } from 'utils/processDirectory';
 
 export const closeProcess =

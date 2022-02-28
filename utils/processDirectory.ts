@@ -1,7 +1,17 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable import/no-cycle */
 import dynamic from 'next/dynamic';
-import type { Processes } from 'types/context/process';
+
+export type Process = {
+  Component: React.ComponentType;
+  hasWindow?: boolean;
+  icon: string;
+  title: string;
+};
+
+export type Processes = {
+  [pid: string]: Process;
+};
 
 export const processDirectory: Processes = {
   HelloWorld: {

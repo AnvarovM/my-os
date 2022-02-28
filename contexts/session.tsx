@@ -1,6 +1,6 @@
 import contextFactory from 'contexts/contextFactory';
+import type { SessionContextState } from 'hooks/useSessionContextState';
 import useSessionContextState from 'hooks/useSessionContextState';
-import type { SessionContextState } from 'types/context/session';
 import { initialSessionContextState } from 'utils/initailContextState';
 
 // SessionContextState

@@ -1,6 +1,6 @@
-import type { FileSystemContextState } from 'types/context/fileSystem';
-import type { ProcessContextState } from 'types/context/process';
-import type { SessionContextState } from 'types/context/session';
+import type { FileSystemContextState } from 'hooks/useFileSystemContextState';
+import type { ProcessContextState } from 'hooks/useProcessContextState';
+import type { SessionContextState } from 'hooks/useSessionContextState';
 
 export const initialFileSystemContextState: FileSystemContextState = {
   fs: null

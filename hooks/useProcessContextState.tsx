@@ -1,12 +1,18 @@
 /* eslint-disable import/no-duplicates */
 /* eslint-disable import/no-cycle */
 import React, { useCallback } from 'react';
-import type {
-  ProcessContextState,
-  Processes,
-  ProcessesMap
-} from 'types/context/process';
+import type { Process, Processes } from 'utils/processDirectory';
 import { closeProcess, openProcess } from 'utils/processFunctions';
+
+type ProcessesMap = (
+  callback: ([id, process]: [string, Process]) => JSX.Element
+) => JSX.Element[];
+
+export type ProcessContextState = {
+  close: (pid: string) => void;
+  open: (pid: string) => void;
+  mapProcesses: ProcessesMap;
+};
 
 const useProcessContextState = (): ProcessContextState => {
   const [processes, setProcesses] = React.useState<Processes>({});

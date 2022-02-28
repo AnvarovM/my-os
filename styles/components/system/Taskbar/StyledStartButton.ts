@@ -13,7 +13,7 @@ const centered = `
   place-items: center;
 `;
 
-export const StyledStartButton = styled(Button)`
+const StyledStartButton = styled(Button)`
   color: ${({ theme }) => theme.colors.startButton};
   height: 100%;
   font-size: ${({ theme }) => theme.sizes.StartButton.size};

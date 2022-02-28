@@ -10,14 +10,13 @@ type FileEntryProps = {
 };
 
 const FileEntry = ({ name, path }: FileEntryProps) => {
-  console.log('hello entry');
   const { icon, pid } = useFileInfo(path);
   const { open } = useProcesses();
   const onActivate = useCallback(() => open(pid), [open, pid]);
 
   return (
     <StyleFileEntry>
-      <Button onClick={onActivate} onKeyDown={onActivate}>
+      <Button onDoubleClick={onActivate} onKeyDown={onActivate}>
         <figure>
           <img src={icon} alt={name} />
           <figcaption>{name}</figcaption>

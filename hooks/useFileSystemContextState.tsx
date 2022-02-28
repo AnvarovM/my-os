@@ -2,8 +2,11 @@
 import * as BrowserFS from 'browserfs';
 import type { FSModule } from 'browserfs/dist/node/core/FS';
 import React, { useEffect } from 'react';
-import type { FileSystemContextState } from 'types/context/fileSystem';
 import fileSystemConfig from 'utils/fileSystemConfig';
+
+export type FileSystemContextState = {
+  fs: FSModule | null;
+};
 
 const useFileSystemContextState = (): FileSystemContextState => {
   const [fs, setFs] = React.useState<FSModule | null>(null);
