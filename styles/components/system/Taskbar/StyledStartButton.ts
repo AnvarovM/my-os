@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 
+const Button = styled.button.attrs(() => ({
+  type: 'button'
+}))`
+  background-color: transparent;
+  font-family: inherit;
+`;
+
 const centered = `
   display: flex;
   place-content: center;
   place-items: center;
 `;
 
-export const StyledStartButton = styled.button.attrs(() => ({
-  type: 'button'
-}))`
+export const StyledStartButton = styled(Button)`
   color: ${({ theme }) => theme.colors.startButton};
   height: 100%;
   font-size: ${({ theme }) => theme.sizes.StartButton.size};

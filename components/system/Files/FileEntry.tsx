@@ -1,6 +1,7 @@
 import { useProcesses } from 'contexts/process';
 import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
+import Button from 'styles/common/Button';
 import StyleFileEntry from 'styles/components/system/Files/StyleFileEntry';
 
 type FileEntryProps = {
@@ -16,12 +17,12 @@ const FileEntry = ({ name, path }: FileEntryProps) => {
 
   return (
     <StyleFileEntry>
-      <button type="button" onClick={onActivate} onKeyDown={onActivate}>
+      <Button onClick={onActivate} onKeyDown={onActivate}>
         <figure>
           <img src={icon} alt={name} />
           <figcaption>{name}</figcaption>
         </figure>
-      </button>
+      </Button>
     </StyleFileEntry>
   );
 };

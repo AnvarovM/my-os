@@ -7,6 +7,7 @@ import { ProcessProvider } from 'contexts/process';
 import type { FC } from 'react';
 
 const Home: FC = () => {
+  console.log('Home');
   return (
     <Desktop>
       <ProcessProvider>
