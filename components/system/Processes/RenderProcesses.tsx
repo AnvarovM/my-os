@@ -4,12 +4,6 @@ import type { FC } from 'react';
 
 const Window = dynamic(() => import('components/system/Window'));
 
-const withWindow = (Component: React.ComponentType) => (
-  <Window>
-    <Component />
-  </Window>
-);
-
 type RenderProcessProps = {
   Component: React.ComponentType;
   hasWindow?: boolean;
@@ -18,4 +12,11 @@ type RenderProcessProps = {
 export const RenderProcess: FC<RenderProcessProps> = ({
   Component,
   hasWindow = false
-}) => (hasWindow ? withWindow(Component) : <Component />);
+}: RenderProcessProps): JSX.Element =>
+  hasWindow ? (
+    <Window>
+      <Component />
+    </Window>
+  ) : (
+    <Component />
+  );
