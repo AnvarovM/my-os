@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   ol,
   li {
-    text-decoration: none;
+    list-style: none;
   }
 `;
 export default GlobalStyle;
