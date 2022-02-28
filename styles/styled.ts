@@ -6,12 +6,12 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       backgroundColor: string;
-      opaqueWhite: string;
       heightLight: string;
       primary: string;
       startButton: string;
       startButtonHover: string;
       taskbar: string;
+      text: string;
       taskbarHover: string;
       window: string;
     };

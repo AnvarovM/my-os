@@ -21,7 +21,7 @@ export const StyledTaskbarEntry = styled.li`
     }
 
     figcaption {
-      color: ${({ theme }) => theme.colors.opaqueWhite};
+      color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
     }
   }
