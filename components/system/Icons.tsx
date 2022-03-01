@@ -1,8 +1,19 @@
-import { faWindows } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaRegWindowMinimize, FaWindows } from 'react-icons/fa';
+import { VscChromeClose, VscChromeMaximize } from 'react-icons/vsc';
 
-const Icons = () => {
-  return <FontAwesomeIcon icon={faWindows} />;
+export const WindowsIcon = () => {
+  return <FaWindows />;
 };
 
-export default Icons;
+export const MinimizeIcon = () => {
+  return <FaRegWindowMinimize />;
+};
+
+export const MaximizeIcon = () => {
+  return <VscChromeMaximize />;
+};
+
+export const CloseIcon = () => {
+  return <VscChromeClose />;
+};
+

@@ -2,7 +2,8 @@
 import { useProcesses } from 'contexts/process';
 import StyleWindow from 'styles/components/system/StyledWindow';
 
-import type { ProcessComponentProps } from './Processes/RenderProcesses';
+import type { ProcessComponentProps } from '../Processes/RenderProcesses';
+import Titlebar from './Titlebar';
 
 const Window: React.FC<ProcessComponentProps> = ({ children, pid }) => {
   const {
@@ -12,7 +13,10 @@ const Window: React.FC<ProcessComponentProps> = ({ children, pid }) => {
   } = useProcesses();
   return (
     <div>
-      <StyleWindow minimized={minimized}>{children}</StyleWindow>
+      <StyleWindow minimized={minimized}>
+        <Titlebar pid={pid} />
+        {children}
+      </StyleWindow>
     </div>
   );
 };
