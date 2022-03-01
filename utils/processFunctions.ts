@@ -26,7 +26,7 @@ export const maximizeProcess =
   (processes: Processes): Processes =>
     toggleProcessSetting(pid, 'maximize')(processes);
 
-export const maximizeProcess =
+export const minimizeProcess =
   (pid: string) =>
   (processes: Processes): Processes =>
-    toggleProcessSetting(pid, 'maximize')(processes);
+    toggleProcessSetting(pid, 'minimize')(processes);
