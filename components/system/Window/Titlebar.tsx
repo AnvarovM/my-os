@@ -22,14 +22,14 @@ const Titlebar = ({ pid }: TitlebarProps) => {
   const onClose = useCallback(() => close(pid), [pid, close]);
 
   return (
-    <StyledTitleBar>
+    <StyledTitleBar className="handle">
       <h1>
         <figure>
           <img src={icon} alt={title} />
           <figcaption>{title}</figcaption>
         </figure>
       </h1>
-      <nav>
+      <nav className="cancel">
         <Button onClick={onMinimize}>
           <MinimizeIcon />
         </Button>
