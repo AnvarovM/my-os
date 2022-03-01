@@ -2,16 +2,14 @@ import styled from 'styled-components';
 
 // eslint-disable-next-line import/prefer-default-export
 const StyleFileManager = styled.ol`
-  border: 2px solid transparent;
-  color: ${({ theme }) => theme.colors.text};
-  margin: 20px;
-  padding: 5px 10px;
-  width: min-content;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.taskbarHover};
-    border: 2px solid gray;
-  }
+  column-gap: 1px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, 74px);
+  grid-template-rows: repeat(auto-fill, 70px);
+  height: ${({ theme }) => `calc(100% - ${theme.sizes.taskbar.height})`};
+  padding: 5px 0;
+  row-gap: 28px;
 `;
 
 export default StyleFileManager;
