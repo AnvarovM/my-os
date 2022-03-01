@@ -12,7 +12,7 @@ export const openProcess = (pid: string) => (currentProcesses: Processes) =>
     : { ...currentProcesses, [pid]: processDirectory[pid] };
 
 export const toggleProcessSetting =
-  (pid: string, setting: 'maximize' | 'minimize') =>
+  (pid: string, setting: 'maximized' | 'minimized') =>
   ({ [pid]: process, ...otherProcesses }: Processes): Processes =>
     process
       ? {
@@ -24,9 +24,9 @@ export const toggleProcessSetting =
 export const maximizeProcess =
   (pid: string) =>
   (processes: Processes): Processes =>
-    toggleProcessSetting(pid, 'maximize')(processes);
+    toggleProcessSetting(pid, 'maximized')(processes);
 
 export const minimizeProcess =
   (pid: string) =>
   (processes: Processes): Processes =>
-    toggleProcessSetting(pid, 'minimize')(processes);
+    toggleProcessSetting(pid, 'minimized')(processes);

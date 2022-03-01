@@ -1,10 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useProcesses } from 'contexts/process';
 import StyleWindow from 'styles/components/system/StyledWindow';
 
-const Window = ({ children }: any): JSX.Element => {
+import type { ProcessComponentProps } from './Processes/RenderProcesses';
+
+const Window: React.FC<ProcessComponentProps> = ({ children, pid }) => {
+  const {
+    processes: {
+      [pid]: { minimized }
+    }
+  } = useProcesses();
   return (
     <div>
-      <StyleWindow>{children}</StyleWindow>
+      <StyleWindow minimized={minimized}>{children}</StyleWindow>
     </div>
   );
 };

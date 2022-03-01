@@ -4,19 +4,25 @@ import type { FC } from 'react';
 
 const Window = dynamic(() => import('components/system/Window'));
 
+export type ProcessComponentProps = {
+  pid: string;
+};
+
 type RenderProcessProps = {
-  Component: React.ComponentType;
+  Component: React.ComponentType<ProcessComponentProps>;
   hasWindow?: boolean;
+  pid: string;
 };
 
 export const RenderProcess: FC<RenderProcessProps> = ({
   Component,
-  hasWindow = false
+  hasWindow = false,
+  pid
 }: RenderProcessProps): JSX.Element =>
   hasWindow ? (
-    <Window>
-      <Component />
+    <Window pid={pid}>
+      <Component pid={pid} />
     </Window>
   ) : (
-    <Component />
+    <Component pid={pid} />
   );

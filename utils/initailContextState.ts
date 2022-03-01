@@ -10,8 +10,9 @@ export const initialProcessContextState: ProcessContextState = {
   close: () => undefined,
   open: () => undefined,
   mapProcesses: () => [],
-  maximize: () => undefined,
-  minimize: () => undefined
+  maximized: () => undefined,
+  minimized: () => undefined,
+  processes: {}
 };
 export const initialSessionContextState: SessionContextState = {
   themeName: '',

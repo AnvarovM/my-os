@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-const StyleWindow = styled.section`
+type StyledWindowProps = {
+  minimized?: boolean;
+};
+
+const StyleWindow = styled.section<StyledWindowProps>`
   background-color: ${({ theme }) => theme.colors.backgroundColor};
+  display: ${({ minimized = false }) => (minimized ? 'none' : 'block')};
   position: absolute;
 `;
 

@@ -9,7 +9,7 @@ const TaskbarEntries: React.FC = () => (
     <ProcessConsumer>
       {({ mapProcesses }) =>
         mapProcesses(([id, { icon, title }]) => (
-          <TaskbarEntry key={id} icon={icon} title={title} />
+          <TaskbarEntry key={id} icon={icon} pid={id} title={title} />
         ))
       }
     </ProcessConsumer>

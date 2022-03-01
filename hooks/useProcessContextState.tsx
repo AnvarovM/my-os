@@ -17,8 +17,9 @@ export type ProcessContextState = {
   close: (pid: string) => void;
   open: (pid: string) => void;
   mapProcesses: ProcessesMap;
-  maximize: (pid: string) => void;
-  minimize: (pid: string) => void;
+  maximized: (pid: string) => void;
+  minimized: (pid: string) => void;
+  processes: Processes;
 };
 
 const useProcessContextState = (): ProcessContextState => {
@@ -31,17 +32,17 @@ const useProcessContextState = (): ProcessContextState => {
     (pid: string) => setProcesses(closeProcess(pid)),
     []
   );
-  const maximize = useCallback(
+  const maximized = useCallback(
     (pid: string) => setProcesses(maximizeProcess(pid)),
     []
   );
-  const minimize = useCallback(
+  const minimized = useCallback(
     (pid: string) => setProcesses(minimizeProcess(pid)),
     []
   );
   const open = useCallback((pid: string) => setProcesses(openProcess(pid)), []);
 
-  return { close, open, mapProcesses, maximize, minimize };
+  return { close, open, mapProcesses, maximized, minimized, processes };
 };
 
 export default useProcessContextState;
