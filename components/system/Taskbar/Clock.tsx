@@ -1,16 +1,11 @@
-/* eslint-disable import/no-named-as-default */
+import useClock from 'hooks/useClock';
 import useLocaleTimeDate from 'hooks/useLocaleTimeDate';
-import useSyncedClock from 'hooks/useSyncedClock';
 import React from 'react';
 import StyledClock from 'styles/components/system/Taskbar/StyledClock';
 
 const Clock = (): JSX.Element => {
-  const [now, setNow] = React.useState<Date>(new Date());
+  const now = useClock();
   const { date, time, dateTime } = useLocaleTimeDate(now);
-
-  const updateClock = React.useCallback(() => setNow(new Date()), []);
-
-  useSyncedClock(updateClock);
 
   return (
     <StyledClock dateTime={dateTime} title={date} suppressHydrationWarning>
