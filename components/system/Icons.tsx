@@ -16,4 +16,3 @@ export const MaximizeIcon = () => {
 export const CloseIcon = () => {
   return <VscChromeClose />;
 };
-
