@@ -18,7 +18,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
 
   const { onClose, onMaximize, onMinimize } = useWindowActions(pid);
   return (
-    <StyledTitleBar className="handle">
+    <StyledTitleBar onDoubleClick={onMaximize} className="handle">
       <h1>
         <figure>
           <Image src={icon} alt={title} />

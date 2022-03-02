@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import type { DraggableEventHandler } from 'react-draggable';
-import type { Position, RndResizeCallback } from 'react-rnd';
+import type { Position, Props, RndResizeCallback } from 'react-rnd';
 import { useTheme } from 'styled-components';
 import { DEFAULT_WINDOW_POSITION, DEFAULT_WINDOW_SIZE } from 'utils/constants';
 
@@ -8,10 +8,7 @@ type Draggable = Position & {
   updatePosition: DraggableEventHandler;
 };
 
-export type Size = {
-  height: string;
-  width: string;
-};
+export type Size = NonNullable<Props['size']>;
 
 type Resizable = Size & {
   updateSize: RndResizeCallback;
