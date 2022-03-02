@@ -1,4 +1,5 @@
 import type { HandleStyles } from 'react-rnd';
+import { CSSProperties } from 'styled-components';
 
 const rndDefaults = {
   bounds: 'main',
@@ -40,6 +41,9 @@ const rndDefaults = {
       cursor: 'ns-resize',
       height: '6px'
     }
+  },
+  style: <CSSProperties>{
+    zIndex: 1
   }
 };
 
