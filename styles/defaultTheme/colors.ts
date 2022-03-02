@@ -15,7 +15,11 @@ const colors = {
   },
   text: 'rgba(255, 255, 255, 80%)',
   taskbarHover: 'hsla(0, 0%, 30%, 60%)',
-  window: '#1bc321'
+  window: {
+    background: '#808080',
+    outline: 'rgba(0, 0, 0, 10%)',
+    shadow: '0 0 12px 0 rgba(0, 0, 0, 0.5)'
+  }
 };
 
 export default colors;

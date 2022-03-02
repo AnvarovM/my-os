@@ -21,7 +21,11 @@ declare module 'styled-components' {
       };
       text: string;
       taskbarHover: string;
-      window: string;
+      window: {
+        background: string;
+        outline: string;
+        shadow: string;
+      };
     };
     sizes: {
       taskbar: {
