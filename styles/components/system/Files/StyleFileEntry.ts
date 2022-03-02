@@ -7,8 +7,8 @@ const StyleFileEntry = styled.li`
   place-content: center;
 
   &:hover {
-    background-color: hsla(0, 0%, 50%, 25%);
-    border: 2px solid hsla(0, 0%, 50%, 25%);
+    background-color: ${({ theme }) => theme.colors.fileEntry.background};
+    border: 2px solid ${({ theme }) => theme.colors.fileEntry.border};
     padding: 0;
     position: relative;
 
@@ -27,9 +27,9 @@ const StyleFileEntry = styled.li`
     z-index: 1;
 
     figcaption {
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors.fileEntry.text};
       font-size: 11.5px;
-      text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.29);
+      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
     }
 
     img {

@@ -6,6 +6,12 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       backgroundColor: string;
+      fileEntry: {
+        background: string;
+        border: string;
+        text: string;
+        textShadow: string;
+      };
       heightLight: string;
       startButton: string;
       startButtonHover: string;

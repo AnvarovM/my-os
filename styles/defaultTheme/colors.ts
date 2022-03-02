@@ -1,5 +1,11 @@
 const colors = {
   backgroundColor: '#4b0082',
+  fileEntry: {
+    background: 'hsla(0, 0%, 50%, 25%)',
+    border: 'hsla(0, 0%, 50%, 25%)',
+    text: '#fff',
+    textShadow: '5px 3px 5px rgba(0, 0, 0, 0.29)'
+  },
   heightLight: '2px solid #add8e6',
   startButton: '#fff',
   startButtonHover: '#1789D1',
