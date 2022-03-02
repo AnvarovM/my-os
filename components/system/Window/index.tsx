@@ -7,7 +7,11 @@ import { Rnd } from 'react-rnd';
 import StyleWindow from 'styles/components/system/StyledWindow';
 import rndDefaults from 'utils/rndDefaults';
 
-const Window: React.FC<ProcessComponentProps> = ({ children, pid }) => {
+type WindowProps = ProcessComponentProps & {
+  children: React.ReactNode;
+};
+
+const Window = ({ children, pid }: WindowProps): JSX.Element => {
   const {
     processes: {
       [pid]: { maximized, minimized }

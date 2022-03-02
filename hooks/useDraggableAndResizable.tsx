@@ -24,8 +24,8 @@ type Resizable = Size & {
 type DraggableAndResizable = Resizable & Draggable;
 
 const defaultWindowSize = {
-  height: '400px',
-  width: '600px'
+  height: '200px',
+  width: '300px'
 };
 
 const useDraggableAndResizable = (maximized = false): DraggableAndResizable => {

@@ -5,7 +5,7 @@ type StyledWindowProps = {
 };
 
 const StyleWindow = styled.section<StyledWindowProps>`
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
+  background-color: gray;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 50%);
   display: ${({ minimized = false }) => (minimized ? 'none' : 'block')};
   height: 100%;
