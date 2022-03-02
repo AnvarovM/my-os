@@ -20,5 +20,9 @@
     "Titlebar",
     "vanta",
     "webp"
-  ]
+  ],
+  "editor.formatOnSave": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "stylelint.autoFixOnSave": true,
+  "files.autoSave": "afterDelay"
 }
