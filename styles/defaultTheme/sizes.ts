@@ -15,6 +15,13 @@ const sizes = {
     fontSize: '15px',
     width: '80px'
   },
+  fileManager: {
+    columnGap: '1px',
+    gridEntryHeight: 'repeat(auto-fill, 74px)',
+    gridEntryWidth: 'repeat(auto-fill, 70px)',
+    padding: '5px 0',
+    rowGap: '28px'
+  },
   StartButton: {
     size: '18px',
     width: '36px'
