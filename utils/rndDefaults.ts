@@ -1,11 +1,13 @@
 import type { HandleStyles } from 'react-rnd';
-import { CSSProperties } from 'styled-components';
+import type { CSSProperties } from 'styled-components';
 
 const rndDefaults = {
   bounds: 'main',
   cancel: '.cancel',
   dragHandleClassName: 'handle',
   enableUserSelectHack: true,
+  minHeight: '25px',
+  minWidth: '250px',
   resizeHandleStyles: <HandleStyles>{
     bottom: {
       bottom: '-3px',

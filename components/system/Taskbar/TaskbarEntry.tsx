@@ -20,7 +20,7 @@ const TaskbarEntry = ({ icon, pid, title }: TaskbarEntryProps): JSX.Element => {
       <Button onClick={onClick}>
         <figure>
           <Image src={icon} alt="" />
-          <figcaption>{title}</figcaption>
+          <figcaption className="truncate">{title}</figcaption>
         </figure>
       </Button>
     </StyledTaskbarEntry>

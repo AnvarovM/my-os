@@ -21,6 +21,6 @@ export const processDirectory: Processes = {
     Component: dynamic(() => import('components/apps/HelloWorld')),
     hasWindow: true,
     icon: 'https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png',
-    title: 'Hello my friend?'
+    title: 'Hello my friend? Hello my friend? Hello my friend?'
   }
 };

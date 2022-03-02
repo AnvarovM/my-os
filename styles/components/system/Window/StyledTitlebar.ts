@@ -2,56 +2,62 @@ import styled from 'styled-components';
 
 const StyledTitleBar = styled.header`
   align-items: center;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.titleBar.backgroundColor};
   display: flex;
+  height: ${({ theme }) => theme.sizes.titleBar.height};
 
   h1 {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.titleBar.text};
+    display: flex;
     flex-grow: 1;
-    font-size: 11.5px;
+    font-size: ${({ theme }) => theme.sizes.titleBar.fontSize};
     font-weight: normal;
-    height: 25px;
+    min-width: 0;
   }
 
   figure {
     align-items: center;
     display: flex;
     margin: 2.5px 0;
-
-    img {
-      height: 16px;
-      margin: 0 8px;
-      width: 16px;
-    }
+    min-width: inherit;
 
     figcaption {
-      .truncate {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 100px;
-      }
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    img {
+      height: ${({ theme }) => theme.sizes.titleBar.iconsSize};
+      margin: ${({ theme }) => theme.sizes.titleBar.iconsMargin};
+      width: ${({ theme }) => theme.sizes.titleBar.iconsSize};
     }
   }
 
   nav {
+    display: flex;
+
     button {
-      height: 100%;
-      width: 45px;
+      border-left: 1px solid #000;
+      display: flex;
+      height: ${({ theme }) => theme.sizes.titleBar.height};
+      place-content: center;
+      place-items: center;
+      width: ${({ theme }) => theme.sizes.titleBar.buttonWidth};
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: ${({ theme }) =>
+          theme.colors.titleBar.backgroundHover};
 
         &.close {
-          background-color: rgba(232, 17, 35);
+          background-color: ${({ theme }) => theme.colors.titleBar.closeHover};
           transition: background-color 0.3s ease;
         }
       }
 
       svg {
         fill: #fff;
-        height: 100%;
-        width: 15px;
+        width: ${({ theme }) => theme.sizes.titleBar.buttonIconSize};
       }
     }
   }

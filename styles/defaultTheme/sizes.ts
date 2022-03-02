@@ -18,6 +18,14 @@ const sizes = {
   StartButton: {
     size: '18px',
     width: '36px'
+  },
+  titleBar: {
+    buttonIconSize: '16px',
+    buttonWidth: '33px',
+    fontSize: '11.5px',
+    height: '30px',
+    iconsMargin: '0 8px',
+    iconsSize: '17px'
   }
 };
 

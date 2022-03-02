@@ -9,7 +9,16 @@ declare module 'styled-components' {
       heightLight: string;
       startButton: string;
       startButtonHover: string;
-      taskbar: string;
+      taskbar: {
+        backgroundColor: string;
+        hover: string;
+      };
+      titleBar: {
+        backgroundColor: string;
+        backgroundHover: string;
+        closeHover: string;
+        text: string;
+      };
       text: string;
       taskbarHover: string;
       window: string;
@@ -26,6 +35,14 @@ declare module 'styled-components' {
           maxWidth: string;
         };
         height: string;
+      };
+      titleBar: {
+        buttonIconSize: string;
+        buttonWidth: string;
+        fontSize: string;
+        height: string;
+        iconsMargin: string;
+        iconsSize: string;
       };
       clock: {
         fontSize: string;

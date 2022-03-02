@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const StyledTaskbar = styled.footer`
   backdrop-filter: ${({ theme }) => `blur(${theme.sizes.taskbar.blur})`};
-  background-color: ${({ theme }) => theme.colors.taskbar};
+  background-color: ${({ theme }) => theme.colors.taskbar.backgroundColor};
   bottom: 0;
   font-size: 30px;
   height: ${({ theme }) => theme.sizes.taskbar.height};

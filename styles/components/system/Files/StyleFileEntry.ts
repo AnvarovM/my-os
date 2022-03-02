@@ -25,6 +25,7 @@ const StyleFileEntry = styled.li`
 
   button {
     z-index: 1;
+
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: 11.5px;
