@@ -11,5 +11,5 @@ export const StyledTaskbar = styled.footer`
   position: absolute;
   right: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 3;
 `;
