@@ -23,11 +23,14 @@ export const StyledTaskbarEntry = styled.li`
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.taskbarHover};
+    background-color: ${({ theme }) => theme.colors.taskbar.hover};
   }
 `;
 
