@@ -22,7 +22,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
       <h1>
         <figure>
           <Image src={icon} alt={title} />
-          <figcaption>{title}</figcaption>
+          <figcaption className="truncate">{title}</figcaption>
         </figure>
       </h1>
       <nav className="cancel">
@@ -32,7 +32,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
         <Button onClick={onMaximize}>
           <MaximizeIcon />
         </Button>
-        <Button onClick={onClose}>
+        <Button className="close" onClick={onClose}>
           <CloseIcon />
         </Button>
       </nav>
