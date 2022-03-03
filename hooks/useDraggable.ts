@@ -1,29 +1,20 @@
-import { useCallback, useState } from 'react';
-import type { DraggableEventHandler } from 'react-draggable';
+import { useState } from 'react';
+import { DEFAULT_WINDOW_POSITION } from 'utils/constants';
 
 type Position = {
   x: number;
   y: number;
 };
 
-type Draggable = Position & {
-  updatePosition: DraggableEventHandler;
-};
+type Draggable = [Position, React.Dispatch<React.SetStateAction<Position>>];
 
-const defaultWindowPosition = {
-  x: 0,
-  y: 0
-};
+const useDraggable = (
+  maximized = false,
+  position = DEFAULT_WINDOW_POSITION
+): Draggable => {
+  const [{ x, y }, setPosition] = useState<Position>(position);
 
-const useDraggable = (maximized = false): Draggable => {
-  const [{ x, y }, setPosition] = useState<Position>(defaultWindowPosition);
-  const updatePosition = useCallback<DraggableEventHandler>(
-    (_event, { x: elementX, y: elementY }) =>
-      setPosition({ x: elementX, y: elementY }),
-    []
-  );
-
-  return { x: maximized ? 0 : x, y: maximized ? 0 : y, updatePosition };
+  return [{ x: maximized ? 0 : x, y: maximized ? 0 : y }, setPosition];
 };
 
 export default useDraggable;
