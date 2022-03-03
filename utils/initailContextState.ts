@@ -18,5 +18,5 @@ export const initialSessionContextState: SessionContextState = {
   setThemeName: () => undefined,
   setWindowState: () => undefined,
   themeName: '',
-  windowState: {}
+  windowStates: {}
 };
