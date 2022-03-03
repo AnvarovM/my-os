@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import packageJson from 'package.json';
-import type { FC } from 'react';
 
 const { description, name } = packageJson;
 
-const Metadata: FC = () => {
+const Metadata = (): JSX.Element => {
   return (
     <Head>
       <meta
