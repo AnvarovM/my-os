@@ -2,7 +2,7 @@ const sizes = {
   taskbar: {
     blur: '5px',
     entry: {
-      fontSize: '14px',
+      fontSize: '12px',
       icon: {
         margin: '0 5px',
         size: '18px'

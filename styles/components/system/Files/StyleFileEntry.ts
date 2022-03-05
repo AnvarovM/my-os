@@ -33,7 +33,6 @@ const StyleFileEntry = styled.li`
     }
 
     img {
-      height: 48px;
       width: 48px;
     }
   }
