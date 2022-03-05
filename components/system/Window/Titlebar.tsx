@@ -12,7 +12,7 @@ type TitlebarProps = {
 const Titlebar = ({ pid }: TitlebarProps) => {
   const {
     processes: {
-      [pid]: { icon, title }
+      [pid]: { autoSizing, icon, title }
     }
   } = useProcesses();
 
@@ -29,7 +29,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
         <Button onClick={onMinimize}>
           <MinimizeIcon />
         </Button>
-        <Button onClick={onMaximize}>
+        <Button onClick={onMaximize} disabled={autoSizing}>
           <MaximizeIcon />
         </Button>
         <Button className="close" onClick={onClose}>

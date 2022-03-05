@@ -1,3 +1,4 @@
+import { useProcesses } from 'contexts/process';
 import { useSession } from 'contexts/session';
 import useDraggable from 'hooks/useDraggable';
 import useResizable from 'hooks/useResizable';
@@ -10,11 +11,16 @@ export type Size = NonNullable<Props['size']>;
 
 const useRnd = (maximized = false, pid: string): Props => {
   const {
+    processes: {
+      [pid]: { autoSizing }
+    }
+  } = useProcesses();
+  const {
     windowStates: { [pid]: windowState }
   } = useSession();
-  const { position: previousPosition, size: previousSize } = windowState || {};
-  const [size, setSize] = useResizable(maximized, previousSize);
-  const [position, setPosition] = useDraggable(maximized, previousPosition);
+  const { position: statePosition, size: stateSize } = windowState || {};
+  const [size, setSize] = useResizable(autoSizing, maximized, stateSize);
+  const [position, setPosition] = useDraggable(maximized, statePosition);
 
   const onDragStop = useCallback<DraggableEventHandler>(
     (_event, { x: positionX, y: positionY }) =>
@@ -37,7 +43,7 @@ const useRnd = (maximized = false, pid: string): Props => {
 
   return {
     disableDragging: maximized,
-    enableResizing: !maximized,
+    enableResizing: !maximized && !autoSizing,
     onDragStop,
     onResize,
     position,

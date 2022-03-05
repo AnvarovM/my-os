@@ -1,9 +1,8 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/no-cycle */
 import type { ProcessComponentProps } from 'components/system/Processes/RenderProcesses';
 import dynamic from 'next/dynamic';
 
 export type Process = {
+  autoSizing?: boolean;
   Component: React.ComponentType<ProcessComponentProps>;
   hasWindow?: boolean;
   icon: string;

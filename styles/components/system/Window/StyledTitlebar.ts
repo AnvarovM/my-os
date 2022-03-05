@@ -54,6 +54,15 @@ const StyledTitleBar = styled.header`
           transition: background-color 0.25s ease;
         }
       }
+      &:disabled {
+        svg {
+          fill: rgb(50, 50, 50);
+        }
+
+        &:hover {
+          background-color: inherit;
+        }
+      }
 
       svg {
         fill: #fff;
