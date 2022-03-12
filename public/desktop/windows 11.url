@@ -1,3 +1,4 @@
 [InternetShortcut]
-URL=HelloWorld
+BASEURL=HelloWorld
 IconFile=/favicon.ico
+URL=whatever.md

@@ -11,6 +11,7 @@ import {
 type FileInfo = {
   icon: string;
   pid: string;
+  url: string;
 };
 
 const useFileInfo = (path: string): FileInfo => {
@@ -18,7 +19,8 @@ const useFileInfo = (path: string): FileInfo => {
   // const [pid, setPid] = useState('');
   const [info, setInfo] = useState<FileInfo>({
     icon: '',
-    pid: ''
+    pid: '',
+    url: ''
   });
   const { fs } = useFileSystem();
 
@@ -28,17 +30,21 @@ const useFileInfo = (path: string): FileInfo => {
       const getInfoByFileExtension = () =>
         setInfo({
           icon: getIconByFileExtension(extension),
-          pid: getProcessByFileExtension(extension)
+          pid: getProcessByFileExtension(extension),
+          url: path
         });
 
       if (extension === '.url') {
         getShortcut(path, fs)
-          .then(({ URL: pid, IconFile: icon }) => setInfo({ icon, pid }))
+          .then(({ BASEURL: pid, IconFile: icon, URL: url }) =>
+            setInfo({ icon, pid, url })
+          )
           .catch(getInfoByFileExtension);
       } else if (IMAGE_FILE_EXTENSION.includes(extension)) {
         setInfo({
           icon: path,
-          pid: 'ImageViewer'
+          pid: 'ImageViewer',
+          url: path
         });
       } else {
         getInfoByFileExtension();

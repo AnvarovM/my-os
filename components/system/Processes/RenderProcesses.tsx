@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 import dynamic from 'next/dynamic';
-import type { FC } from 'react';
 
 const Window = dynamic(() => import('components/system/Window'));
 
@@ -14,7 +13,7 @@ type RenderProcessProps = {
   pid: string;
 };
 
-export const RenderProcess: FC<RenderProcessProps> = ({
+export const RenderProcess = ({
   Component,
   hasWindow = false,
   pid

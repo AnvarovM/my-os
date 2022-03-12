@@ -6,6 +6,7 @@ import type { Processes } from 'utils/processDirectory';
 type RenderProcessesProps = {
   processes: Processes;
 };
+
 const ProcessorLoader: FC<RenderProcessesProps> = () => (
   <ProcessConsumer>
     {({ mapProcesses }) =>

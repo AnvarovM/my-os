@@ -1,7 +1,13 @@
-import type { FC } from 'react';
+/* eslint-disable import/no-cycle */
+import { useProcesses } from 'contexts/process';
 
-const HelloWorld: FC = () => {
-  return <h1>Hi how are you?</h1>;
+const HelloWorld = ({ pid }): JSX.Element => {
+  const {
+    processes: {
+      [pid]: { url }
+    }
+  } = useProcesses();
+  return <h1>Hi how are you? {url} </h1>;
 };
 
 export default HelloWorld;

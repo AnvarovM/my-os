@@ -6,10 +6,13 @@ export const closeProcess =
   ({ [pid]: _closeProcess, ...remainingProcesses }: Processes): Processes =>
     remainingProcesses;
 
-export const openProcess = (pid: string) => (currentProcesses: Processes) =>
-  currentProcesses[pid] || !processDirectory[pid]
-    ? currentProcesses
-    : { ...currentProcesses, [pid]: processDirectory[pid] };
+export const openProcess = (pid: string, url: string) => {
+  const id = url ? `${pid}_${url}` : pid;
+  return (currentProcesses: Processes): Processes =>
+    currentProcesses[id] || !processDirectory[pid]
+      ? currentProcesses
+      : { ...currentProcesses, [id]: { ...processDirectory[pid], url } };
+};
 
 export const toggleProcessSetting =
   (pid: string, setting: 'maximized' | 'minimized') =>
