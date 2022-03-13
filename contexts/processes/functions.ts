@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
-import type { Processes } from 'utils/processDirectory';
-import { processDirectory } from 'utils/processDirectory';
+import type { Processes } from 'contexts/processes/directory';
+import { processDirectory } from 'contexts/processes/directory';
 
 export const closeProcess =
   (pid: string) =>

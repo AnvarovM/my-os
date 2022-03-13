@@ -1,5 +1,5 @@
 import { CloseIcon, MaximizeIcon, MinimizeIcon } from 'components/system/Icons';
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import useWindowActions from 'hooks/useWindowActions';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';

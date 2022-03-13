@@ -1,5 +1,5 @@
 /* eslint-disable import/no-named-as-default */
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import { useCallback } from 'react';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';

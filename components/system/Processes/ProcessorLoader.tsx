@@ -1,7 +1,7 @@
 import { RenderProcess } from 'components/system/Processes/RenderProcesses';
-import { ProcessConsumer } from 'contexts/process';
+import { ProcessConsumer } from 'contexts/processes';
+import type { Processes } from 'contexts/processes/directory';
 import type { FC } from 'react';
-import type { Processes } from 'utils/processDirectory';
 
 type RenderProcessesProps = {
   processes: Processes;

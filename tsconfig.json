@@ -23,6 +23,6 @@
     "**/*.tsx",
     "pages/_app.tsx",
     "pages/index.tsx"
-  ],
+, "contexts/session"  ],
   "exclude": ["node_modules"]
 }

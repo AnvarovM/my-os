@@ -1,4 +1,4 @@
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import { useCallback } from 'react';
 
 type WindowActions = {

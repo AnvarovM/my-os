@@ -1,4 +1,4 @@
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import { useSession } from 'contexts/session';
 import useDraggable from 'hooks/useDraggable';
 import useResizable from 'hooks/useResizable';

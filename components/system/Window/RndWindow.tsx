@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
+import useSessionContextState from 'contexts/session/useSessionContextState';
 import useRnd from 'hooks/useRnd';
-import useSessionContextState from 'hooks/useSessionContextState';
 import { useEffect, useRef } from 'react';
 import { Rnd } from 'react-rnd';
 import { DEFAULT_WINDOW_SIZE } from 'utils/constants';

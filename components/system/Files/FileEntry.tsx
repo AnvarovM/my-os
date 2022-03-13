@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import useDoubleClick from 'hooks/useDoubleClick';
 import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';

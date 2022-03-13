@@ -2,7 +2,7 @@
 import type { ProcessComponentProps } from 'components/system/Processes/RenderProcesses';
 import RndWindow from 'components/system/Window/RndWindow';
 import Titlebar from 'components/system/Window/Titlebar';
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import StyleWindow from 'styles/components/system/StyledWindow';
 
 type WindowProps = ProcessComponentProps & {

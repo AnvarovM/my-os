@@ -1,9 +1,9 @@
 /* eslint-disable import/no-cycle */
 // eslint-disable-next-line import/no-cycle
 import contextFactory from 'contexts/contextFactory';
-import type { ProcessContextState } from 'hooks/useProcessContextState';
-import useProcessContextState from 'hooks/useProcessContextState';
-import { initialProcessContextState } from 'utils/initailContextState';
+import { initialProcessContextState } from 'contexts/initailContextState';
+import type { ProcessContextState } from 'contexts/processes/useProcessContextState';
+import useProcessContextState from 'contexts/processes/useProcessContextState';
 
 const { Provider, Consumer, useContext } = contextFactory<ProcessContextState>(
   initialProcessContextState,

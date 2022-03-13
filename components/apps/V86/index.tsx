@@ -2,7 +2,7 @@
 import useV86 from 'components/apps/V86/useV86';
 import useV86ScreenSize from 'components/apps/V86/useV86ScreenSize';
 import type { ProcessComponentProps } from 'components/system/Processes/RenderProcesses';
-import { useProcesses } from 'contexts/process';
+import { useProcesses } from 'contexts/processes';
 import { useRef } from 'react';
 import StyledV86 from 'styles/components/app/V86/StyledV86';
 
