@@ -12,7 +12,7 @@ import type {
 import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';
-import { bufferToUrl, loadScript } from 'utils/fileFunctions';
+import { bufferToUrl, loadFiles } from 'utils/fileFunctions';
 
 const useV86 = (
   id: string,
@@ -26,7 +26,7 @@ const useV86 = (
   useEffect(() => {
     if (!emulator) {
       fs?.readFile(url, (_error, contents = Buffer.from('')) => {
-        loadScript('libs/v86/libv86.js', () => {
+        loadFiles(['/libs/v86/libv86.js']).then(() => {
           const isISO = extname(url).toLowerCase() === '.iso';
           const { deviceMemory = 8 } = navigator as NavigatorWithV86Starter;
           const memoryRatio = deviceMemory / 8;
