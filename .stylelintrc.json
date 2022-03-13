@@ -1,15 +1,16 @@
 {
   "extends": [
-    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-sass-guidelines",
     "stylelint-config-styled-components",
-    "stylelint-config-standard-scss",
-    "stylelint-config-sass-guidelines"
+    "stylelint-config-prettier"
   ],
+  "plugins": ["stylelint-order"],
   "rules": {
-    "no-empty-source": null,
-    "max-nesting-depth": 5,
-    "max-line-length": null,
-    "value-keyword-case": null
-  },
-  "processors": ["stylelint-processor-styled-components"]
+    "function-no-unknown": null,
+    "max-nesting-depth": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": null,
+    "selector-no-qualifying-type": null
+  }
 }
