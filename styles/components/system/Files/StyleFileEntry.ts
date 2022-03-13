@@ -24,12 +24,14 @@ const StyleFileEntry = styled.li`
   }
 
   button {
-    z-index: 1;
+    position: relative;
 
     figcaption {
       color: ${({ theme }) => theme.colors.fileEntry.text};
       font-size: 11.5px;
-      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
+      position: relative;
+      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};text-shadow;
+      top: -1px;
     }
 
     img {
