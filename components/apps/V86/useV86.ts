@@ -9,10 +9,10 @@ import type {
   V86Starter,
   WindowWithV86Starter
 } from 'components/apps/V86/types';
+import { bufferToUrl, loadFiles } from 'components/system/Files/functions';
 import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';
-import { bufferToUrl, loadFiles } from 'utils/fileFunctions';
 
 const useV86 = (
   id: string,

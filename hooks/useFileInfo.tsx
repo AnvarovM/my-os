@@ -1,12 +1,12 @@
+import {
+  getIconByFileExtension,
+  getProcessByFileExtension
+} from 'components/system/Files/functions';
 import { useFileSystem } from 'contexts/fileSystem';
+import ini from 'ini';
 import { extname } from 'path';
 import { useEffect, useState } from 'react';
 import { IMAGE_FILE_EXTENSION } from 'utils/constants';
-import {
-  getIconByFileExtension,
-  getProcessByFileExtension,
-  getShortcut
-} from 'utils/fileFunctions';
 
 type FileInfo = {
   icon: string;
@@ -35,11 +35,20 @@ const useFileInfo = (path: string): FileInfo => {
         });
 
       if (extension === '.url') {
-        getShortcut(path, fs)
-          .then(({ BASEURL: pid, IconFile: icon, URL: url }) =>
-            setInfo({ icon, pid, url })
-          )
-          .catch(getInfoByFileExtension);
+        fs.readFile(path, (error, contents = Buffer.from('')) => {
+          if (error) {
+            getInfoByFileExtension();
+          } else {
+            const {
+              InternetShortcut: {
+                BASEURL: pid = '',
+                IconFile: icon = '',
+                URL: url = ''
+              }
+            } = ini.parse(contents.toString());
+            setInfo({ icon, pid, url });
+          }
+        });
       } else if (IMAGE_FILE_EXTENSION.includes(extension)) {
         setInfo({
           icon: path,
