@@ -69,6 +69,9 @@ declare module 'styled-components' {
         size: string;
         width: string;
       };
+      window: {
+        lineHeight: string;
+      };
     };
     wallpaper?: WallpaperEffect;
   }

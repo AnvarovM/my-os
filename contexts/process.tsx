@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 // eslint-disable-next-line import/no-cycle
 import contextFactory from 'contexts/contextFactory';
 import type { ProcessContextState } from 'hooks/useProcessContextState';

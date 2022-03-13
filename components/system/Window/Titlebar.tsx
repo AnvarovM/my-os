@@ -29,7 +29,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
         <Button onClick={onMinimize}>
           <MinimizeIcon />
         </Button>
-        <Button onClick={onMaximize} disabled={autoSizing}>
+        <Button className="maximize" onClick={onMaximize} disabled={autoSizing}>
           <MaximizeIcon />
         </Button>
         <Button className="close" onClick={onClose}>

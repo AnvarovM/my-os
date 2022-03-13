@@ -10,10 +10,10 @@ const StyleFileEntry = styled.li`
     background-color: ${({ theme }) => theme.colors.fileEntry.background};
     border: 2px solid ${({ theme }) => theme.colors.fileEntry.border};
     padding: 0;
-    position: relative;
+    position: relatie;
 
     &::before {
-      border: 2px solid hsla(0, 0%, 70%, 50%);
+      border: 2px solid hsla(0, 0%, 70%, v 50%);
       bottom: -1px;
       content: '';
       left: -1px;
