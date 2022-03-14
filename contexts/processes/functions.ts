@@ -17,13 +17,13 @@ export const openProcess = (pid: string, url: string) => {
 
 export const toggleProcessSetting =
   (pid: string, setting: 'maximized' | 'minimized') =>
-  ({ [pid]: process, ...otherProcesses }: Processes): Processes =>
-    process
-      ? {
-          [pid]: { ...process, [setting]: !process[setting] },
-          ...otherProcesses
-        }
-      : otherProcesses;
+  (currentProcesses: Processes): Processes => {
+    const { ...newProcesses } = currentProcesses;
+
+    newProcesses[pid][setting] = !newProcesses[pid][setting];
+
+    return newProcesses;
+  };
 
 export const maximizeProcess =
   (pid: string) =>
