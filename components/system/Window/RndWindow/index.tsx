@@ -1,6 +1,6 @@
+import useRnd from 'components/system/Window/RndWindow/useRnd';
 import { useProcesses } from 'contexts/processes';
 import { useSession } from 'contexts/session';
-import useRnd from 'hooks/useRnd';
 import { useEffect, useRef } from 'react';
 import { Rnd } from 'react-rnd';
 import { DEFAULT_WINDOW_SIZE } from 'utils/constants';
@@ -8,9 +8,10 @@ import { DEFAULT_WINDOW_SIZE } from 'utils/constants';
 type RndWindowProps = {
   children: React.ReactNode;
   pid: string;
+  style: React.CSSProperties;
 };
 
-const RndWindow = ({ children, pid }: RndWindowProps): JSX.Element => {
+const RndWindow = ({ children, pid, style }: RndWindowProps): JSX.Element => {
   const {
     processes: {
       [pid]: { autoSizing, maximized }
@@ -35,7 +36,7 @@ const RndWindow = ({ children, pid }: RndWindowProps): JSX.Element => {
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
-    <Rnd ref={rndRef} {...rndProps}>
+    <Rnd ref={rndRef} style={style} {...rndProps}>
       {children}
     </Rnd>
   );
