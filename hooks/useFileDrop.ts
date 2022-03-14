@@ -23,16 +23,16 @@ const useFileDrop = (
       const { files: [file] = [] } = event.dataTransfer || {};
       const reader = new FileReader();
 
-      reader.onload = ({ target }) =>
+      reader.onload = ({ target }) => {
         fs?.writeFile(
           `${directory}/${file.name}`,
-          target?.result as ArrayBuffer,
+          Buffer.from(new Uint8Array(target?.result as ArrayBuffer)),
           (error) => !error && updateFiles(file.name)
         );
+      };
 
       reader.readAsArrayBuffer(file);
     },
-
     [directory, fs, updateFiles]
   );
 
