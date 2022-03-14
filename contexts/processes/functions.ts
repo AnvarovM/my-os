@@ -7,8 +7,12 @@ export const closeProcess =
   ({ [pid]: _closeProcess, ...remainingProcesses }: Processes): Processes =>
     remainingProcesses;
 
+export const createPid = (processId: string, url: string): string =>
+  url ? `${processId}_${url}` : processId;
+
 export const openProcess = (pid: string, url: string) => {
-  const id = url ? `${pid}_${url}` : pid;
+  // const id = url ? `${pid}_${url}` : pid;
+  const id = createPid(pid, url);
   return (currentProcesses: Processes): Processes =>
     currentProcesses[id] || !processDirectory[pid]
       ? currentProcesses

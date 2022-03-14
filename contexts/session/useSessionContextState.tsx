@@ -72,7 +72,7 @@ const useSessionContextState = (): SessionContextState => {
     stackOrder,
     themeName,
     windowStates
-   };
+  };
 };
 
 export default useSessionContextState;

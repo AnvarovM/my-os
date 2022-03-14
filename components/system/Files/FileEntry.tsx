@@ -1,5 +1,7 @@
 /* eslint-disable no-shadow */
 import { useProcesses } from 'contexts/processes';
+import { createPid } from 'contexts/processes/functions';
+import { useSession } from 'contexts/session';
 import useDoubleClick from 'hooks/useDoubleClick';
 import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
@@ -13,8 +15,17 @@ type FileEntryProps = {
 
 const FileEntry = ({ name, path }: FileEntryProps) => {
   const { icon, pid, url } = useFileInfo(path);
-  const { open } = useProcesses();
-  const onClick = useCallback(() => open(pid, url), [open, pid, url]);
+  const { setForegroundId } = useSession();
+  const { open, processes } = useProcesses();
+  const onClick = useCallback(() => {
+    const id = createPid(pid, url);
+
+    if (processes[id]) {
+      setForegroundId(id);
+    } else {
+      open(pid, url);
+    }
+  }, [open, pid, processes, setForegroundId, url]);
 
   return (
     <Button onClick={useDoubleClick(onClick)} onKeyDown={onClick}>
