@@ -9,6 +9,17 @@ export const StyledTaskbarEntry = styled.li`
   height: 100%;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
   ${centered};
+  margin: 0 4px;
+  min-width: 0;
+  padding: 0;
+  width: ${({ theme }) => `calc(${theme.sizes.taskbar.entry.maxWidth} - 8px)`};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.taskbar.hover};
+    margin: 0;
+    padding: 0 4px;
+    width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
+  }
 
   figure {
     align-items: center;
@@ -23,7 +34,7 @@ export const StyledTaskbarEntry = styled.li`
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
-      overflow: hidden;
+      overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
