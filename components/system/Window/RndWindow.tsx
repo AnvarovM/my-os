@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { useProcesses } from 'contexts/processes';
-import useSessionContextState from 'contexts/session/useSessionContextState';
+import { useSession } from 'contexts/session';
 import useRnd from 'hooks/useRnd';
 import { useEffect, useRef } from 'react';
 import { Rnd } from 'react-rnd';
@@ -12,30 +11,30 @@ type RndWindowProps = {
 };
 
 const RndWindow = ({ children, pid }: RndWindowProps): JSX.Element => {
-  const rndRef = useRef<Rnd | null>(null);
   const {
     processes: {
       [pid]: { autoSizing, maximized }
     }
   } = useProcesses();
-
+  const rndRef = useRef<Rnd | null>(null);
   const rndProps = useRnd(maximized, pid);
+  const { setWindowStates } = useSession();
 
-  const { setWindowState } = useSessionContextState();
   useEffect(() => {
     const { current } = rndRef || {};
 
     return () =>
-      setWindowState((currentWindowsState) => ({
-        ...currentWindowsState,
+      setWindowStates((currentWindowStates) => ({
+        ...currentWindowStates,
         [pid]: {
           position: current?.props?.position,
           size: autoSizing ? DEFAULT_WINDOW_SIZE : current?.props?.size
         }
       }));
-  }, [autoSizing, pid, setWindowState]);
+  }, [autoSizing, pid, setWindowStates]);
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <Rnd ref={rndRef} {...rndProps}>
       {children}
     </Rnd>
