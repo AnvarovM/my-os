@@ -31,14 +31,14 @@ export const processDirectory: Processes = {
     backgroundColor: '#000',
     Component: dynamic(() => import('components/apps/V86')),
     hasWindow: true,
-    icon: '/icons/kolibri.ico',
+    icon: '/icons/v86.png',
     title: 'V86'
   },
   Test: {
     autoSizing: false,
     Component: dynamic(() => import('components/apps/Test')),
     hasWindow: true,
-    icon: '/icons/unknown.ico',
+    icon: '/images/unknown.png',
     title: 'This is for testing'
   }
 };
