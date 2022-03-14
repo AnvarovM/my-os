@@ -1,5 +1,4 @@
-import type { config } from 'components/apps/V86/config';
-import type { V86ImageConfig } from 'components/apps/V86/image';
+import type { config as v86Config } from 'components/apps/V86/config';
 
 export type EventCallback = (data: number[]) => void;
 
@@ -10,7 +9,6 @@ export type V86Starter = {
   destroy: () => void;
   lock_mouse: () => void;
   remove_listener: EventListener;
-  save_state: (callback: (error: Error, newState: ArrayBuffer) => void) => void;
 };
 
 export type V86 = {
@@ -18,31 +16,24 @@ export type V86 = {
   lockMouse: () => void;
 };
 
-export type V86Config = V86ImageConfig &
-  typeof config & {
-    boot_order: number;
-    cdrom?: {
-      url?: string;
-    };
-    fda?: {
-      url?: string;
-    };
-    memory_size: number;
-    initial_state?: { url: string };
-    vga_memory_size: number;
-    screen_container: HTMLDivElement | null;
+type V86Config = typeof v86Config & {
+  memory_size: number;
+  vga_memory_size: number;
+  boot_order: number;
+  cdrom?: {
+    url?: string;
   };
+  fda?: {
+    url?: string;
+  };
+  screen_container: HTMLDivElement | null;
+};
 
-type V86Constructor = new (v86Config: V86Config) => V86Starter;
-
-declare global {
-  interface Window {
-    DEBUG?: boolean;
-    V86Starter: V86Constructor;
-  }
+interface V86Constructor {
+  new (config: V86Config): V86Starter;
 }
 
 export type WindowWithV86Starter = Window &
   typeof globalThis & { V86Starter: V86Constructor };
 
-export type NavigatorWithV86Starter = Navigator & { deviceMemory: number };
+export type NavigatorWithMemory = Navigator & { deviceMemory: number };

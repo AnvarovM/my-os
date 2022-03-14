@@ -4,7 +4,7 @@ import {
   config as V86Config
 } from 'components/apps/V86/config';
 import type {
-  NavigatorWithV86Starter,
+  NavigatorWithMemory,
   V86,
   V86Starter,
   WindowWithV86Starter
@@ -28,7 +28,7 @@ const useV86 = (
       fs?.readFile(url, (_error, contents = Buffer.from('')) => {
         loadFiles(['/libs/v86/libv86.js']).then(() => {
           const isISO = extname(url).toLowerCase() === '.iso';
-          const { deviceMemory = 8 } = navigator as NavigatorWithV86Starter;
+          const { deviceMemory = 8 } = navigator as NavigatorWithMemory;
           const memoryRatio = deviceMemory / 8;
 
           setEmulator(

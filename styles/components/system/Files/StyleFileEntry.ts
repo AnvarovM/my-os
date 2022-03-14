@@ -10,10 +10,10 @@ const StyleFileEntry = styled.li`
     background-color: ${({ theme }) => theme.colors.fileEntry.background};
     border: 2px solid ${({ theme }) => theme.colors.fileEntry.border};
     padding: 0;
-    position: relatie;
+    position: relative;
 
     &::before {
-      border: 2px solid hsla(0, 0%, 70%, v 50%);
+      border: 2px solid hsla(0, 0%, 70%, 50%);
       bottom: -1px;
       content: '';
       left: -1px;
@@ -30,8 +30,7 @@ const StyleFileEntry = styled.li`
       color: ${({ theme }) => theme.colors.fileEntry.text};
       font-size: 11.5px;
       position: relative;
-      text-shadow: ${({ theme }) =>
-        theme.colors.fileEntry.textShadow};text-shadow;
+      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
       top: -1px;
     }
 

@@ -27,18 +27,11 @@ export const processDirectory: Processes = {
     title: 'Hello my friend? Hello my friend? Hello my friend?'
   },
   V86: {
-    autoSizing: false,
+    autoSizing: true,
     backgroundColor: '#000',
     Component: dynamic(() => import('components/apps/V86')),
     hasWindow: true,
     icon: '/icons/v86.png',
-    title: 'V86'
-  },
-  Test: {
-    autoSizing: false,
-    Component: dynamic(() => import('components/apps/Test')),
-    hasWindow: true,
-    icon: '/images/unknown.png',
-    title: 'This is for testing'
+    title: 'v86'
   }
 };

@@ -14,7 +14,7 @@ const useV86ScreenSize = (
   id: string,
   emulator: V86Starter | null
 ): CSSProperties => {
-  const { setWindowState } = useSession();
+  const { setWindowStates } = useSession();
   const {
     sizes: {
       titleBar,
@@ -24,13 +24,13 @@ const useV86ScreenSize = (
 
   const updateWindowSize = useCallback(
     (height: number, width: number) =>
-      setWindowState((currentWindowStates) => ({
+      setWindowStates((currentWindowStates) => ({
         ...currentWindowStates,
         [id]: {
           size: { height, width }
         }
       })),
-    [id, setWindowState]
+    [id, setWindowStates]
   );
 
   const setScreenGfx = useCallback<EventCallback>(
