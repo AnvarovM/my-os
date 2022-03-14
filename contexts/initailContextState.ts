@@ -15,8 +15,12 @@ export const initialProcessContextState: ProcessContextState = {
   processes: {}
 };
 export const initialSessionContextState: SessionContextState = {
+  foregroundId: '',
+  setForegroundId: () => undefined,
+  setStackOrder: () => undefined,
   setThemeName: () => undefined,
   setWindowStates: () => undefined,
+  stackOrder: [],
   themeName: '',
   windowStates: {}
 };
