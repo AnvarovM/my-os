@@ -1,4 +1,6 @@
+import useNextFocusable from 'components/system/Window/useNextFocusable';
 import { useProcesses } from 'contexts/processes';
+import { useSession } from 'contexts/session';
 import { useCallback } from 'react';
 
 type WindowActions = {
@@ -8,10 +10,21 @@ type WindowActions = {
 };
 
 const useWindowActions = (pid: string): WindowActions => {
+  const nextFocusableId = useNextFocusable(pid);
+  const { setForegroundId, setStackOrder } = useSession();
   const { close, maximized, minimized } = useProcesses();
-  const onMinimize = useCallback(() => minimized(pid), [pid, minimized]);
+  const onMinimize = useCallback(() => {
+    minimized(pid);
+    setForegroundId(nextFocusableId);
+  }, [pid, minimized, nextFocusableId, setForegroundId]);
   const onMaximize = useCallback(() => maximized(pid), [pid, maximized]);
-  const onClose = useCallback(() => close(pid), [pid, close]);
+  const onClose = useCallback(() => {
+    setStackOrder((currentStackOrder) =>
+      currentStackOrder.filter((stackId) => stackId !== pid)
+    );
+    close(pid);
+    setForegroundId(nextFocusableId);
+  }, [setStackOrder, close, pid, setForegroundId, nextFocusableId]);
 
   return { onClose, onMaximize, onMinimize };
 };
