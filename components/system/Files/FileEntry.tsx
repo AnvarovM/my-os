@@ -5,7 +5,6 @@ import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';
-import StyleFileEntry from 'styles/components/system/Files/StyleFileEntry';
 
 type FileEntryProps = {
   name: string;
@@ -18,14 +17,12 @@ const FileEntry = ({ name, path }: FileEntryProps) => {
   const onClick = useCallback(() => open(pid, url), [open, pid, url]);
 
   return (
-    <StyleFileEntry>
-      <Button onClick={useDoubleClick(onClick)} onKeyDown={onClick}>
-        <figure>
-          <Image src={icon} alt={name} />
-          <figcaption>{name}</figcaption>
-        </figure>
-      </Button>
-    </StyleFileEntry>
+    <Button onClick={useDoubleClick(onClick)} onKeyDown={onClick}>
+      <figure>
+        <Image src={icon} alt={name} />
+        <figcaption>{name}</figcaption>
+      </figure>
+    </Button>
   );
 };
 
