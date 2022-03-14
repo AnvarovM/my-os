@@ -1,6 +1,8 @@
 import type { Size } from 'hooks/useRnd';
 import type { Position } from 'react-rnd';
 
+export const MILLISECONDS_IN_SECOND = 1000;
+
 export const DEFAULT_LOCALE = 'en';
 
 export const DEFAULT_WINDOW_SIZE: Size = {

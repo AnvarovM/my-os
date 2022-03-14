@@ -1,4 +1,4 @@
-import useWallpaper from 'hooks/useWallpaper';
+import useWallpaper from 'components/system/Desktop/wallpapers/useWallpaper';
 import { useRef } from 'react';
 import StyledDesktop from 'styles/components/system/StyledDesktop';
 

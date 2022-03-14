@@ -1,4 +1,4 @@
-import VantaWaves from 'utils/vantaWaves';
+import VantaWaves from 'components/system/Desktop/wallpapers/vantaWaves';
 
 const wallpaper = VantaWaves({
   gyroControls: true,
