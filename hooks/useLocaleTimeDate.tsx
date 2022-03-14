@@ -1,5 +1,4 @@
-import config from 'next.config';
-import { useRouter } from 'next/router';
+import { DEFAULT_LOCALE } from 'utils/constants';
 
 type LocaleTimeDate = {
   date: string;
@@ -8,15 +7,14 @@ type LocaleTimeDate = {
 };
 
 const useLocaleTimeDate = (now: Date): LocaleTimeDate => {
-  const { locale = config.i18n.defaultLocale } = useRouter() || {};
   return {
-    date: new Intl.DateTimeFormat(locale, {
+    date: new Intl.DateTimeFormat(DEFAULT_LOCALE, {
       weekday: 'long',
       month: 'long',
       day: 'numeric',
       year: 'numeric'
     }).format(now),
-    time: new Intl.DateTimeFormat(locale, {
+    time: new Intl.DateTimeFormat(DEFAULT_LOCALE, {
       hour: 'numeric',
       minute: '2-digit',
       second: '2-digit',

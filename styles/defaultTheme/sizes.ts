@@ -16,10 +16,10 @@ const sizes = {
     width: '80px'
   },
   fileManager: {
-    columnGap: '28px',
-    gridEntryHeight: 'repeat(auto-fill, 74px)',
-    gridEntryWidth: 'repeat(auto-fill, 60px)',
-    padding: '10px 10px',
+    columnGap: '1px',
+    gridEntryHeight: 'repeat(auto-fill, 70px)',
+    gridEntryWidth: 'repeat(auto-fill, 74px)',
+    padding: '10px',
     rowGap: '28px'
   },
   StartButton: {

@@ -30,7 +30,8 @@ const StyleFileEntry = styled.li`
       color: ${({ theme }) => theme.colors.fileEntry.text};
       font-size: 11.5px;
       position: relative;
-      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};text-shadow;
+      text-shadow: ${({ theme }) =>
+        theme.colors.fileEntry.textShadow};text-shadow;
       top: -1px;
     }
 
