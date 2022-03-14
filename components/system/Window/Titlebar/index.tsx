@@ -1,9 +1,14 @@
-import { CloseIcon, MaximizeIcon, MinimizeIcon } from 'components/system/Icons';
+import {
+  CloseIcon,
+  MaximizedIcon,
+  MaximizeIcon,
+  MinimizeIcon
+} from 'components/system/Icons';
+import StyledTitleBar from 'components/system/Window/Titlebar/StyledTitlebar';
+import useWindowActions from 'components/system/Window/Titlebar/useWindowActions';
 import { useProcesses } from 'contexts/processes';
-import useWindowActions from 'hooks/useWindowActions';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';
-import StyledTitleBar from 'styles/components/system/Window/StyledTitlebar';
 
 type TitlebarProps = {
   pid: string;
@@ -12,7 +17,7 @@ type TitlebarProps = {
 const Titlebar = ({ pid }: TitlebarProps) => {
   const {
     processes: {
-      [pid]: { autoSizing, icon, title }
+      [pid]: { autoSizing, icon, title, maximized }
     }
   } = useProcesses();
 
@@ -30,7 +35,7 @@ const Titlebar = ({ pid }: TitlebarProps) => {
           <MinimizeIcon />
         </Button>
         <Button className="maximize" onClick={onMaximize} disabled={autoSizing}>
-          <MaximizeIcon />
+          {maximized ? <MaximizedIcon /> : <MaximizeIcon />}
         </Button>
         <Button className="close" onClick={onClose}>
           <CloseIcon />

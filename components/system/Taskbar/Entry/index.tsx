@@ -1,9 +1,9 @@
 /* eslint-disable import/no-named-as-default */
+import StyledTaskbarEntry from 'components/system/Taskbar/Entry/TaskbarEntry';
 import { useProcesses } from 'contexts/processes';
 import { useCallback } from 'react';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';
-import StyledTaskbarEntry from 'styles/components/system/Taskbar/TaskbarEntry';
 
 type TaskbarEntryProps = {
   icon: string;

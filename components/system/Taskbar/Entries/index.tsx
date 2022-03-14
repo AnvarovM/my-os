@@ -1,8 +1,8 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable import/no-unresolved */
-import TaskbarEntry from 'components/system/Taskbar/TaskbarEntry';
+import StyledTaskbarEntries from 'components/system/Taskbar/Entries/StyledTaskbarEntries';
+import TaskbarEntry from 'components/system/Taskbar/Entry';
 import { ProcessConsumer } from 'contexts/processes';
-import StyledTaskbarEntries from 'styles/components/system/Taskbar/StyledTaskbarEntries';
 
 const TaskbarEntries: React.FC = () => (
   <StyledTaskbarEntries>

@@ -49,14 +49,17 @@ const StyledTitleBar = styled.header`
         background-color: ${({ theme }) =>
           theme.colors.titleBar.backgroundHover};
 
-        &.close {
+        &.close,
+        &.maximized {
           background-color: ${({ theme }) => theme.colors.titleBar.closeHover};
           transition: background-color 0.25s ease;
         }
       }
+
       &:disabled {
         svg {
           fill: rgb(50, 50, 50);
+          margin: 0 1px 2px 0;
         }
 
         &:hover {

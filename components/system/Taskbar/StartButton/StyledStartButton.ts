@@ -15,8 +15,8 @@ const centered = `
 
 const StyledStartButton = styled(Button)`
   color: ${({ theme }) => theme.colors.startButton};
-  height: 100%;
   font-size: ${({ theme }) => theme.sizes.StartButton.size};
+  height: 100%;
   left: 0;
   ${centered};
   position: absolute;
