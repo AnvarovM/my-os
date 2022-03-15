@@ -24,6 +24,7 @@ export const StyledTaskbarEntry = styled.li`
   figure {
     align-items: center;
     display: flex;
+    padding: 4px;
 
     img {
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
@@ -34,6 +35,7 @@ export const StyledTaskbarEntry = styled.li`
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
+      margin-left: 4px;
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

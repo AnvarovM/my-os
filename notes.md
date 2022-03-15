@@ -23,8 +23,8 @@
 - Session JSON parse should have default empty object
 - Flex center file entry contents and add padding
 - Pixelate resized icons
-
 - Adjust padding/margin for taskbar entry
+
 - Foreground status updated in taskbar entry
 - Don't change foreground when clicking taskbar entry
 - Add default empty object for windowStates
