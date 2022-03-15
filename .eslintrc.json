@@ -18,7 +18,6 @@
     "plugin:react-hooks/recommended",
     "plugin:testing-library/react"
   ],
-  "ignorePatterns": ["public/"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
