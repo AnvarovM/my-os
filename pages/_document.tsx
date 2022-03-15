@@ -1,5 +1,6 @@
 import type { DocumentContext, DocumentInitialProps } from 'next/document';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { DEFAULT_LOCALE } from 'utils/constants';
 import withStyledComponents from 'utils/withStyledComponents';
 
 class MyDocument extends Document {
@@ -12,7 +13,7 @@ class MyDocument extends Document {
   // eslint-disable-next-line no-undef
   public render(): JSX.Element {
     return (
-      <Html lang="en">
+      <Html lang={DEFAULT_LOCALE}>
         <Head />
         <body>
           <Main />
