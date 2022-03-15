@@ -13,7 +13,7 @@ import {
   bufferToUrl,
   cleanUpBufferUrl,
   loadFiles
-} from 'components/system/Files/functions';
+} from 'components/system/Files/FileEntry/functions';
 import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';

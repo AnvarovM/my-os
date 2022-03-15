@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import FileEntry from 'components/system/Files/FileEntry';
-import useFileDrop from 'hooks/useFileDrop';
-import useFiles from 'hooks/useFiles';
+import useFileDrop from 'components/system/Files/useFileDrop';
+import useFiles from 'components/system/Files/useFiles';
 import { basename, extname, resolve } from 'path';
 import StyledFileEntry from 'styles/components/system/Files/StyleFileEntry';
 import StyleFileManager from 'styles/components/system/Files/StyleFileManager';

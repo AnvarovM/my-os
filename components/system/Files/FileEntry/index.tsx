@@ -1,9 +1,9 @@
 /* eslint-disable no-shadow */
+import useFileInfo from 'components/system/Files/FileEntry/useFileInfo';
+import useDoubleClick from 'components/system/useDoubleClick';
 import { useProcesses } from 'contexts/processes';
 import { createPid } from 'contexts/processes/functions';
 import { useSession } from 'contexts/session';
-import useDoubleClick from 'hooks/useDoubleClick';
-import useFileInfo from 'hooks/useFileInfo';
 import { useCallback } from 'react';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';
