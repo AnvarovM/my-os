@@ -3,7 +3,7 @@ import StyledTaskbarEntry from 'components/system/Taskbar/Entry/StyledTaskbarEnt
 import useNextFocusable from 'components/system/Window/useNextFocusable';
 import { useProcesses } from 'contexts/processes';
 import { useSession } from 'contexts/session';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import Button from 'styles/common/Button';
 import Image from 'styles/common/Image';
 
@@ -16,14 +16,16 @@ type TaskbarEntryProps = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const TaskbarEntry = ({ icon, pid, title }: TaskbarEntryProps): JSX.Element => {
   const nextFocusableId = useNextFocusable(pid);
-  const { setForegroundId } = useSession();
+  const { foregroundId, setForegroundId } = useSession();
+  const isForeground = useMemo(() => pid === foregroundId, [foregroundId, pid]);
   const { minimized } = useProcesses();
+
   const onClick = useCallback(() => {
     minimized(pid);
     setForegroundId(nextFocusableId);
   }, [pid, minimized, nextFocusableId, setForegroundId]);
   return (
-    <StyledTaskbarEntry>
+    <StyledTaskbarEntry foreground={isForeground}>
       <Button onClick={onClick}>
         <figure>
           <Image src={icon} alt="" />

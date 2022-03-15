@@ -16,7 +16,9 @@ declare module 'styled-components' {
       startButton: string;
       startButtonHover: string;
       taskbar: {
-        backgroundColor: string;
+        active: string;
+        activeHover: string;
+        background: string;
         hover: string;
       };
       titleBar: {
@@ -46,6 +48,7 @@ declare module 'styled-components' {
         };
         height: string;
       };
+      text: string;
       titleBar: {
         buttonIconSize: string;
         buttonWidth: string;
