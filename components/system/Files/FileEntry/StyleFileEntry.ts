@@ -26,18 +26,22 @@ const StyleFileEntry = styled.li`
   button {
     position: relative;
 
-    figcaption {
-      color: ${({ theme }) => theme.colors.fileEntry.text};
-      font-size: 11.5px;
-      position: relative;
-      text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
-      top: -1px;
-    }
+    figure {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
 
-    img {
-      width: 48px;
+      figcaption {
+        color: ${({ theme }) => theme.colors.fileEntry.text};
+        font-size: ${({ theme }) => theme.sizes.titleBar.fontSize}; 
+        text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
+      }
+
+      img {
+        width: 48px;
+      }
     }
   }
-`;
+}`;
 
 export default StyleFileEntry;

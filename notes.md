@@ -22,6 +22,7 @@
 - Only file drop if there is a file
 - Session JSON parse should have default empty object
 - Flex center file entry contents and add padding
+
 - Pixelate resized icons
 - Adjust padding/margin for taskbar entry
 - Foreground status updated in taskbar entry
