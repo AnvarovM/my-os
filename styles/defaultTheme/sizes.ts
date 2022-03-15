@@ -34,6 +34,7 @@ const sizes = {
     iconsMargin: '0 8px',
     iconsSize: '17px'
   },
+  text: '#fff',
   window: {
     lineHeight: '14px'
   }
