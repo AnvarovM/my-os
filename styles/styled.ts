@@ -43,6 +43,7 @@ declare module 'styled-components' {
             size: string;
           };
           maxWidth: string;
+          iconSize: string;
         };
         height: string;
       };

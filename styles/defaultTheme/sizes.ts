@@ -7,7 +7,8 @@ const sizes = {
         margin: '0 5px',
         size: '18px'
       },
-      maxWidth: '160px'
+      maxWidth: '160px',
+      iconSize: '48px'
     },
     height: '30px'
   },

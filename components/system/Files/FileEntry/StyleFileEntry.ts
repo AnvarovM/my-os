@@ -33,12 +33,16 @@ const StyleFileEntry = styled.li`
 
       figcaption {
         color: ${({ theme }) => theme.colors.fileEntry.text};
-        font-size: ${({ theme }) => theme.sizes.titleBar.fontSize}; 
+        font-size: ${({ theme }) => theme.sizes.titleBar.fontSize};
         text-shadow: ${({ theme }) => theme.colors.fileEntry.textShadow};
       }
 
       img {
-        width: 48px;
+        /* width: 48px; */
+        height: ${({ theme }) => theme.sizes.taskbar.entry.iconSize};
+        image-rendering: pixelated;
+        margin: ${({ theme }) => theme.sizes.taskbar.entry.icon.margin};
+        width: ${({ theme }) => theme.sizes.taskbar.entry.iconSize};
       }
     }
   }

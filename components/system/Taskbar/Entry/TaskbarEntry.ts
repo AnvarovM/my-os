@@ -7,9 +7,9 @@ const centered = `
 export const StyledTaskbarEntry = styled.li`
   border-bottom: ${({ theme }) => theme.colors.heightLight};
   height: 100%;
+  margin: 0 4px;
   max-width: ${({ theme }) => theme.sizes.taskbar.entry.maxWidth};
   ${centered};
-  margin: 0 4px;
   min-width: 0;
   padding: 0;
   width: ${({ theme }) => `calc(${theme.sizes.taskbar.entry.maxWidth} - 8px)`};
@@ -42,6 +42,7 @@ export const StyledTaskbarEntry = styled.li`
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.taskbar.hover};
+    image-rendering: pixelated;
   }
 `;
 
