@@ -27,9 +27,9 @@
 - Foreground status updated in taskbar entry
 - Don't change foreground when clicking taskbar entry
 - Add default empty object for windowStates
-
 - Check that initial context states are updated/alphabetized
 - Don't show common image element until it's loaded
+
 - Increase theme text color alpha to 90%
 - Change default vanta color to 0x192b34
 - Split up process types to use keyof
