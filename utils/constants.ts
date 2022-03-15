@@ -6,8 +6,8 @@ export const MILLISECONDS_IN_SECOND = 1000;
 export const DEFAULT_LOCALE = 'en';
 
 export const DEFAULT_WINDOW_SIZE: Size = {
-  height: '200px',
-  width: '300px'
+  height: '290px',
+  width: '350px'
 };
 
 export const DEFAULT_WINDOW_POSITION: Position = {
