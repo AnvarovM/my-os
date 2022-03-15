@@ -41,7 +41,6 @@ const StyleFileEntry = styled.li`
         /* width: 48px; */
         height: ${({ theme }) => theme.sizes.taskbar.entry.iconSize};
         image-rendering: pixelated;
-        margin: ${({ theme }) => theme.sizes.taskbar.entry.icon.margin};
         width: ${({ theme }) => theme.sizes.taskbar.entry.iconSize};
       }
     }
