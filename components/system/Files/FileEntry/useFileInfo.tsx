@@ -1,4 +1,5 @@
 import {
+  bufferToUrl,
   getIconByFileExtension,
   getProcessByFileExtension
 } from 'components/system/Files/FileEntry/functions';
@@ -15,8 +16,6 @@ type FileInfo = {
 };
 
 const useFileInfo = (path: string): FileInfo => {
-  // const [icon, setIcon] = useState('');
-  // const [pid, setPid] = useState('');
   const [info, setInfo] = useState<FileInfo>({
     icon: '',
     pid: '',
@@ -27,9 +26,9 @@ const useFileInfo = (path: string): FileInfo => {
   useEffect(() => {
     if (fs) {
       const extension = extname(path);
-      const getInfoByFileExtension = () =>
+      const getInfoByFileExtension = (icon?: string) =>
         setInfo({
-          icon: getIconByFileExtension(extension),
+          icon: icon || getIconByFileExtension(extension),
           pid: getProcessByFileExtension(extension),
           url: path
         });
@@ -50,11 +49,11 @@ const useFileInfo = (path: string): FileInfo => {
           }
         });
       } else if (IMAGE_FILE_EXTENSION.includes(extension)) {
-        setInfo({
-          icon: path,
-          pid: 'ImageViewer',
-          url: path
-        });
+        fs.readFile(path, (error, contents = Buffer.from('')) =>
+          getInfoByFileExtension(
+            error ? '/icons/photo.png' : bufferToUrl(contents)
+          )
+        );
       } else {
         getInfoByFileExtension();
       }
