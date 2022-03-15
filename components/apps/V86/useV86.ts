@@ -9,7 +9,11 @@ import type {
   V86Starter,
   WindowWithV86Starter
 } from 'components/apps/V86/types';
-import { bufferToUrl, loadFiles } from 'components/system/Files/functions';
+import {
+  bufferToUrl,
+  cleanUpBufferUrl,
+  loadFiles
+} from 'components/system/Files/functions';
 import { useFileSystem } from 'contexts/fileSystem';
 import { extname } from 'path';
 import { useCallback, useEffect, useState } from 'react';
@@ -30,22 +34,25 @@ const useV86 = (
           const isISO = extname(url).toLowerCase() === '.iso';
           const { deviceMemory = 8 } = navigator as NavigatorWithMemory;
           const memoryRatio = deviceMemory / 8;
+          const bufferUrl = bufferToUrl(contents);
+          const v86 = new (window as WindowWithV86Starter).V86Starter({
+            memory_size: memoryRatio * 1024 * 1024 * 1024,
+            vga_memory_size: memoryRatio * 32 * 1024 * 1024,
+            boot_order: isISO ? BOOT_CD_FD_HD : BOOT_FD_CD_HD,
+            [isISO ? 'cdrom' : 'fda']: {
+              async: false,
+              size: contents.length,
+              url: bufferUrl,
+              use_parts: false
+            },
+            screen_container: screenContainer.current,
+            ...V86Config
+          });
 
-          setEmulator(
-            new (window as WindowWithV86Starter).V86Starter({
-              memory_size: memoryRatio * 1024 * 1024 * 1024,
-              vga_memory_size: memoryRatio * 32 * 1024 * 1024,
-              boot_order: isISO ? BOOT_CD_FD_HD : BOOT_FD_CD_HD,
-              [isISO ? 'cdrom' : 'fda']: {
-                async: false,
-                size: contents.length,
-                url: bufferToUrl(contents),
-                use_parts: false
-              },
-              screen_container: screenContainer.current,
-              ...V86Config
-            })
+          v86.add_listener('emulator-loaded', () =>
+            cleanUpBufferUrl(bufferUrl)
           );
+          setEmulator(v86);
         });
       });
     }

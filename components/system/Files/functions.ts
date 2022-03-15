@@ -68,5 +68,7 @@ export const loadFiles = async (files: string[]): Promise<Event[]> =>
     }, [])
   );
 
+export const cleanUpBufferUrl = (url: string): void => URL.revokeObjectURL(url);
+
 export const bufferToUrl = (buffer: Buffer): string =>
   URL.createObjectURL(new Blob([new Uint8Array(buffer)]));
