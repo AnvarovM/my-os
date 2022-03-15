@@ -39,7 +39,6 @@ declare module 'styled-components' {
         entry: {
           fontSize: string;
           icon: {
-            margin: string;
             size: string;
           };
           maxWidth: string;

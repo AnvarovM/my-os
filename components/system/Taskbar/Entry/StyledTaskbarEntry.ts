@@ -26,12 +26,6 @@ export const StyledTaskbarEntry = styled.li`
     display: flex;
     padding: 4px;
 
-    img {
-      font-size: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
-      margin: ${({ theme }) => theme.sizes.taskbar.entry.icon.margin};
-      width: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
-    }
-
     figcaption {
       color: ${({ theme }) => theme.colors.text};
       font-size: ${({ theme }) => theme.sizes.taskbar.entry.fontSize};
@@ -39,6 +33,12 @@ export const StyledTaskbarEntry = styled.li`
       overflow-x: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+    }
+
+    img {
+      font-size: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
+      image-rendering: pixelated;
+      width: ${({ theme }) => theme.sizes.taskbar.entry.icon.size};
     }
   }
 

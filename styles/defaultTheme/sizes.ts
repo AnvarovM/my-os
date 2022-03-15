@@ -4,7 +4,6 @@ const sizes = {
     entry: {
       fontSize: '12px',
       icon: {
-        margin: '0 5px',
         size: '18px'
       },
       maxWidth: '160px',
