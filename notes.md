@@ -24,10 +24,10 @@
 - Flex center file entry contents and add padding
 - Pixelate resized icons
 - Adjust padding/margin for taskbar entry
-
 - Foreground status updated in taskbar entry
 - Don't change foreground when clicking taskbar entry
 - Add default empty object for windowStates
+
 - Check that initial context states are updated/alphabetized
 - Don't show common image element until it's loaded
 - Increase theme text color alpha to 90%
